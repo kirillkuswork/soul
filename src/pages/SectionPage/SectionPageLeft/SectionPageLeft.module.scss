@@ -1,0 +1,52 @@
+@import '../../../../styles/vars';
+
+.sectionPageLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title {
+        margin: wv-1600(20px) 0 wv-1600(60px) 0;
+        @include h1;
+        color: $black;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        gap: wv-1600(8px);
+        margin-bottom: wv-1600(20px);
+    }
+
+    &__description + &__description {
+        margin-bottom: wv-1600(40px);
+    }
+
+    &__name {
+        @include p2;
+        color: $grey;
+    }
+
+    &__amount {
+        font-family: 'TT Travels';
+        font-style: normal;
+        font-weight: 600;
+        font-size: wv-1600(28px);
+        line-height: 136%;
+    }
+
+    &__descriptions {
+        display: flex;
+        flex-direction: column;
+        gap: wv-1600(5px);
+    }
+
+    &__descript {
+        @include p2;
+        color: $black;
+
+        &:nth-child(2) {
+            color: $beige;
+        }
+    }
+}

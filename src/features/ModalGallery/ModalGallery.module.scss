@@ -1,0 +1,250 @@
+@import 'styles/vars';
+
+.gallery {
+    background: $white;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 65;
+
+    &__closebtn {
+        height: 45px;
+        width: 45px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-top: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+        z-index: 6;
+
+        @include mobile() {
+            margin-top: 15px;
+            margin-right: 15px;
+            height: 30px;
+            width: 30px;
+        }
+    }
+    &__icon {
+        height: 45px;
+        width: 45px;
+
+        @include mobile() {
+            height: 30px;
+            width: 30px;
+        }
+
+        path {
+            stroke: $black;
+        }
+        &__white {
+            path {
+                stroke: $white;
+            }
+        }
+    }
+}
+.slider {
+    height: 100vh !important;
+    width: 100vw;
+}
+.slide {
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: hidden;
+    position: relative;
+
+    //TransformWrapper style
+    [class*='transform-component-module_wrapper'] {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+}
+
+.buttonsContainer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 50px;
+    padding-right: 28px;
+
+    button {
+        height: 50px;
+        cursor: pointer;
+
+        @include tablet-p() {
+            height: 40px;
+        }
+
+        @include mobile() {
+            height: 40px;
+        }
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    button:first-of-type {
+        margin-right: 20px;
+    }
+
+    @include tablet-p() {
+        padding-bottom: 40px;
+        padding-right: 40px;
+    }
+
+    @include mobile() {
+        padding-bottom: 110px;
+        padding-right: 15px;
+    }
+
+    &__icon {
+        height: 50px;
+        width: 50px;
+
+        @include tablet-p() {
+            height: 40px;
+            width: 40px;
+        }
+
+        @include mobile() {
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    &__hover {
+        button:hover {
+            line {
+                stroke: $beige;
+            }
+            path {
+                fill: $beige;
+            }
+        }
+    }
+}
+
+.modalImg {
+    position: relative !important;
+    max-width: calc(100vw - 320px);
+    object-fit: cover;
+    @media screen and (max-width: 1200px) and (orientation: portrait) {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100vw;
+        max-width: 100vw;
+        height: auto !important;
+    }
+}
+.zoombuttons {
+    z-index: 10;
+    @include flex(column, null, center);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 28px;
+
+    @include mobile() {
+        right: 15px;
+    }
+
+    button {
+        cursor: pointer;
+        height: 40px;
+        &:first-of-type {
+            margin-bottom: 12px;
+        }
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+    &__icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    padding: wv-1600(24px) wv-1600(28px);
+    height: 207px;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0));
+
+    &_inner {
+        max-width: wv-1600(1100px);
+
+        @include laptop() {
+            max-width: wv-1200(1070px);
+        }
+
+        @include tablet-p() {
+            max-width: wv-768(680px);
+        }
+
+        @include mobile() {
+            max-width: wv-375(300px);
+        }
+    }
+
+    @include laptop() {
+        padding: wv-1200(24px) wv-1200(28px);
+    }
+
+    @include tablet-l() {
+        padding: wv-768(24px) wv-768(28px);
+    }
+
+    @include tablet-p() {
+        padding: wv-768(24px) wv-768(28px);
+        background: none;
+    }
+
+    @include mobile() {
+        padding: wv-375(20px) wv-375(15px);
+        background: none;
+    }
+}
+
+.title {
+    @include large-p;
+    color: $white;
+    padding-bottom: wv-1600(12px);
+
+    @include laptop() {
+        padding: wv-1200(12px);
+    }
+
+    @include tablet-p() {
+        color: $black;
+        padding-bottom: wv-768(12px);
+    }
+
+    @include mobile() {
+        color: $black;
+        font-size: wv-375(16px);
+        padding-bottom: wv-375(8px);
+    }
+}
+.text {
+    @include p1;
+    color: $white;
+
+    @include tablet-p() {
+        color: $grey;
+    }
+
+    @include mobile() {
+        color: $grey;
+        font-size: wv-375(14px);
+    }
+}

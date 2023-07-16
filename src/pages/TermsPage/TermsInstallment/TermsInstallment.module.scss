@@ -1,0 +1,23 @@
+@import 'styles/vars';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: wv-1600(80px) wv-1600(60px) wv-1600(140px) wv-1600(60px);
+
+  @include laptop() {
+    padding: wv-1200(80px) wv-1200(60px) wv-1200(140px) wv-1200(60px);
+  }
+
+  @include tablet-l() {
+    padding: wv-768(60px) wv-768(40px) wv-768(105px) wv-768(40px);
+  }
+
+  @include tablet-p() {
+    padding: wv-768(60px) wv-768(40px) wv-768(105px) wv-768(40px);
+  }
+
+  @include mobile() {
+    padding: wv-375(40px) wv-375(15px) wv-375(80px) wv-375(15px);
+  }
+}

@@ -1,0 +1,156 @@
+@import '../../../../styles/vars';
+
+.flatInfoRight {
+    width: wv-1600(494px);
+    margin-top: wv-1600(3px);
+
+    @include laptop() {
+        width: wv-1200(400px);
+    }
+    @include tablet-p() {
+        width: wv-768(360px);
+    }
+
+    &__titlebox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: wv-1600(5px);
+    }
+
+    &__title {
+        @include h3;
+        color: $black;
+    }
+
+    &__deadline {
+        margin-bottom: wv-1600(25px);
+        @include sign;
+    }
+
+    &__box {
+        margin-bottom: wv-1600(38px);
+    }
+
+    &__parameters {
+        margin-bottom: wv-1600(40px);
+    }
+    &__parametersTitle {
+        @include p1-bold;
+        color: black;
+        margin-bottom: wv-1600(15px);
+    }
+
+    &__priceBlock {
+        margin-bottom: wv-1600(40px);
+    }
+
+    &__price {
+        @include h3;
+        color: $beige;
+    }
+    &__take {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: wv-1600(50px);
+        margin-bottom: wv-1600(40px);
+    }
+
+    &__purchase {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__purchaseBtn {
+        display: flex;
+        justify-content: center;
+        width: wv-1600(241px);
+        padding: wv-1600(20px) wv-1600(0px);
+        border: wv-1600(1.5px) solid $black;
+        background-color: transparent;
+        font-weight: 600;
+        font-size: wv-1600(20px);
+        line-height: wv-1600(24px);
+        color: $black;
+        transition: all 0.5s ease;
+        cursor: pointer;
+
+        &:hover {
+            border: wv-1600(1.5px) solid $beige;
+            color: $beige;
+        }
+    }
+
+    &__purchaseBtnBlack {
+        background-color: $black;
+        font-weight: 600;
+        font-size: wv-1600(20px);
+        line-height: wv-1600(24px);
+        color: $white;
+        &:hover {
+            background-color: $beige;
+            color: $white;
+        }
+    }
+
+    &__wrapper {
+        @include wrapper-form-outer;
+    }
+
+    &__form {
+        @include wrapper-form-inner;
+    }
+}
+
+.shared {
+    position: absolute;
+    right: wv-1600(-10px);
+    bottom: wv-1600(30px);
+    display: flex;
+    flex-direction: column;
+    gap: wv-1600(15px);
+
+    padding: wv-1600(20px);
+    background-color: $light-beige;
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: wv-1600(10px);
+        cursor: pointer;
+    }
+    &__link:hover &__name {
+        color: $beige;
+    }
+    &__link:hover &__icon {
+        border: 1px solid $beige;
+    }
+
+    &__link:hover &__icon > svg > path {
+        fill: $beige;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: wv-1600(40px);
+        height: wv-1600(40px);
+        border: 1px solid $grey;
+    }
+
+    &__name {
+        @include p2;
+    }
+
+    &__printed path {
+        stroke: aqua;
+    }
+}
+
+.flatInfoLeft__printed {
+    & > path {
+        stroke: aqua;
+        fill: aqua;
+    }
+}

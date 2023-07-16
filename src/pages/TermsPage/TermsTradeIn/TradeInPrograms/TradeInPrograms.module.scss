@@ -1,0 +1,131 @@
+@import 'styles/vars';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: wv-1600(60px);
+    padding: wv-1600(140px) wv-1600(60px) wv-1600(140px) wv-1600(60px);
+
+    @include laptop() {
+        gap: wv-1200(60px);
+        padding: wv-1200(140px) wv-1200(60px) wv-1200(140px) wv-1200(60px);
+    }
+
+    @include tablet-l() {
+        gap: wv-768(45px);
+        padding: wv-768(105px) wv-768(40px);
+    }
+
+    @include tablet-p() {
+        gap: wv-768(45px);
+        padding: wv-768(105px) wv-768(40px);
+    }
+
+    @include mobile() {
+        gap: wv-375(30px);
+        padding: wv-375(80px) wv-375(15px);
+    }
+}
+
+.title {
+    @include h3;
+
+    @include tablet-l() {
+        @include h2;
+    }
+
+    @include tablet-p() {
+        @include h2;
+    }
+
+    @include mobile() {
+        @include h2;
+    }
+}
+
+.programs {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet-l() {
+        flex-direction: column;
+        gap: wv-768(45px);
+    }
+
+    @include tablet-p() {
+        flex-direction: column;
+        gap: wv-768(45px);
+    }
+
+    @include mobile() {
+        flex-direction: column;
+        gap: wv-375(30px);
+    }
+
+    & > div > p {
+        @include p1-bold;
+        margin-bottom: wv-1600(40px);
+
+        @include laptop() {
+            margin-bottom: wv-1200(40px);
+        }
+
+        @include tablet-l() {
+            margin-bottom: wv-768(15px);
+        }
+
+        @include tablet-p() {
+            margin-bottom: wv-768(15px);
+        }
+
+        @include mobile() {
+            margin-bottom: wv-375(15px);
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: wv-1600(15px);
+        margin-bottom: wv-1600(40px);
+
+        @include laptop() {
+            gap: wv-1200(15px);
+            margin-bottom: wv-1200(40px);
+        }
+
+        @include tablet-l() {
+            gap: wv-768(5px);
+            margin-bottom: wv-768(25px);
+        }
+
+        @include tablet-p() {
+            gap: wv-768(5px);
+            margin-bottom: wv-768(25px);
+        }
+
+        @include mobile() {
+            gap: wv-375(5px);
+            margin-bottom: wv-375(20px);
+        }
+    }
+
+    li {
+        @include p2;
+
+        @include beige-rectangle-hyphens;
+    }
+}
+
+.program {
+    width: 100%;
+    max-width: wv-1600(543px);
+
+    @include tablet-p() {
+     max-width: 100%;
+  }
+
+    @include mobile() {
+      max-width: 100%;
+  }
+}

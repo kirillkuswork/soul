@@ -1,0 +1,143 @@
+@import 'styles/vars';
+
+.visualcomplex {
+    transform: translateX(wv-1600(-80px));
+    position: relative;
+    &__genplan {
+        width: wv-1600(1050.1px);
+        height: wv-1600(636.89px);
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__link {
+        position: absolute;
+        z-index: 10;
+        right: wv-1600(-110px);
+    }
+
+    // Стили для свг квартир и пинов
+    &__hidden {
+        opacity: 1;
+        cursor: pointer;
+
+        fill: rgba(145, 170, 182, 0.4);
+        stroke: rgba(145, 170, 182);
+    }
+
+    &__visible {
+        opacity: 0;
+        cursor: pointer;
+        position: relative;
+        
+        &:hover {
+            opacity: 1;
+        }
+        
+    }
+
+    &__hiddenPins {
+        fill: $grey;
+        stroke: $grey;
+    }
+    &__visiblePins {
+        opacity: 1;
+        cursor: pointer;
+
+        fill: $black;
+        stroke: $black;
+
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+            fill: $beige;
+            stroke: $beige;
+
+            & > path {
+                // fill: $beige;
+                stroke: $beige;
+
+                & > path {
+                    fill: $beige;
+                    stroke: $beige;
+                }
+            }
+        }
+    }
+}
+
+.visualModal {
+    position: absolute;
+    width: wv-1600(252px);
+    height: max-content;
+    padding: wv-1600(12px);
+    background: $light-beige;
+    left: wv-1600(200px);
+    bottom: wv-1600(50px);
+
+    &__top {
+        margin-bottom: wv-1600(16px);
+        padding-bottom: wv-1600(16px);
+        border-bottom: wv-1600(1px) solid rgba(0, 0, 0, 0.1);
+    }
+
+    &__title {
+        @include p2-bold;
+        color: $black;
+        margin-bottom: 12px;
+    }
+
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__name {
+        font-family: 'TT Travels';
+        font-style: normal;
+        font-weight: 400;
+        font-size: wv-1600(12px);
+        line-height: 130%;
+        color: $grey;
+        &:nth-child(1) {
+            margin-bottom: wv-1600(8px);
+        }
+    }
+
+    &__amount {
+        font-family: 'TT Travels';
+        font-style: normal;
+        font-weight: 400;
+        font-size: wv-1600(12px);
+        line-height: 130%;
+        color: $black;
+    }
+
+    &__soonSell {
+        position: absolute;
+        padding: wv-1600(6px) wv-1600(10px);
+        @include p2;
+        width: max-content;
+        background: $black;
+        color: $white;
+        &::after {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-45%);
+            border: solid transparent;
+            // background-color: red;
+            content: '';
+            z-index: 10;
+            // width: 100px;
+            // height: 40px;
+
+            border-color: rgba(36, 41, 46, 0);
+            border-top-color: #24292e;
+            border-width: 8px;
+        }
+    }
+}

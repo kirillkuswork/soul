@@ -1,0 +1,49 @@
+@import '../../../../styles/vars';
+
+.favoriteLeftBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile() {
+        flex-direction: column;
+    }
+
+    &__buttons {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: wv-1600(54px);
+
+        @include mobile() {
+            gap: 0;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: wv-375(15px);
+        }
+    }
+
+    &__request {
+        @include p3-bold;
+        color: $white;
+        background: $black;
+        padding: wv-1600(15px) wv-1600(35px);
+        cursor: pointer;
+
+        @include tablet-p() {
+            padding: wv-768(11px) wv-768(35px);
+        }
+        @include mobile() {
+            width: 100%;
+            padding: wv-375(15px) wv-768(0px);
+        }
+    }
+
+    &__wrapper {
+      @include wrapper-form-outer;
+    }
+
+    &__form {
+      @include wrapper-form-inner;
+    }
+}

@@ -1,0 +1,62 @@
+@import "styles/vars";
+
+.btn {
+  @include p3-bold;
+  position: relative;
+  color: $blue-black;
+  width: wv-1600(44px);
+  height: wv-1600(44px);
+  border: 1px solid $blue-black;
+  cursor: pointer;
+  z-index: 2;
+
+  @include tablet() {
+    width: wv-1200(44px);
+    height: wv-1200(44px);
+  }
+
+  @include tablet-l() {
+    width: wv-768(34px);
+    height: wv-768(34px);
+  }
+
+  @include tablet-p() {
+    width: wv-768(34px);
+    height: wv-768(34px);
+  }
+
+  @include mobile() {
+    width: wv-375(44px);
+    height: wv-375(44px);
+  }
+
+  &:not(:last-of-type) {
+    margin-right: -1px;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      border-color: $beige;
+      color: $beige;
+      background: $white;
+    }
+  }
+
+  &_active {
+    z-index: 3;
+    border-color: $beige;
+    background: $beige;
+    color: $white;
+  }
+
+  &_disabled {
+    z-index: 1;
+    border-color: $grey;
+    color: $grey;
+
+    &:hover {
+      border-color: $grey;
+      color: $grey;
+    }
+  }
+}

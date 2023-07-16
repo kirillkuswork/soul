@@ -1,0 +1,282 @@
+@import 'styles/vars';
+
+.container {
+    height: 100vh;
+    max-width: wv-1600(660px);
+    @include flex(column, space-between, null);
+    padding: wv-1600(140px) wv-1600(60px) wv-1600(75px) wv-1600(60px);
+    position: relative;
+    a {
+        cursor: pointer;
+    }
+
+    @include tablet() {
+        max-width: wv-1200(660px);
+        padding: wv-1200(140px) wv-1200(60px) wv-1200(75px) wv-1200(60px);
+    }
+
+    @include tablet() {
+        max-width: wv-1600(660px);
+        padding: wv-1600(140px) wv-1600(60px) wv-1600(75px) wv-1600(60px);
+    }
+
+    @include tablet-l() {
+        max-width: 100%;
+        padding: wv-768(135px) wv-768(40px) wv-768(45px) wv-768(40px);
+    }
+
+    @include tablet-p() {
+        display: block;
+        height: fit-content;
+        max-width: 100%;
+        padding: wv-768(135px) wv-768(40px) wv-768(45px) wv-768(40px);
+    }
+
+    @include mobile() {
+        display: block;
+        height: fit-content;
+        max-width: 100%;
+        padding: wv-375(85px) wv-375(15px) wv-375(30px) wv-375(15px);
+    }
+
+    &__hover {
+        .mapLink:hover,
+        .link:hover {
+            color: $beige;
+            path {
+                fill: $beige;
+            }
+        }
+        .route__link:hover {
+            color: $beige;
+            path {
+                fill: $beige;
+            }
+            rect {
+                stroke: $beige;
+            }
+        }
+    }
+}
+
+.content {
+    &__item {
+        min-width: wv-1600(440px);
+        padding-bottom: wv-1600(30px);
+        margin-bottom: wv-1600(30px);
+        border-bottom: 1px solid rgba(36, 41, 46, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: wv-1600(10px);
+
+        @include tablet() {
+            gap: wv-1200(10px);
+            margin-bottom: wv-1200(30px);
+        }
+
+        @include tablet-l() {
+            gap: wv-768(10px);
+            margin-bottom: wv-768(16px);
+        }
+
+        @include tablet-p() {
+            gap: wv-768(10px);
+            margin-bottom: wv-768(16px);
+        }
+
+        @include mobile() {
+            gap: wv-375(10px);
+            margin-bottom: wv-375(16px);
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: wv-768(280px) wv-768(280px);
+        column-gap: wv-768(70px);
+        row-gap: wv-768(10px);
+        padding-bottom: wv-768(16px);
+        margin-bottom: wv-768(16px);
+        border-bottom: 1px solid rgba(36, 41, 46, 0.1);
+    }
+}
+
+.title {
+    @include h2;
+    padding-bottom: wv-1600(60px);
+
+    @include tablet() {
+        padding-bottom: wv-1200(60px);
+    }
+
+    @include tablet-l() {
+        padding-bottom: wv-768(32px);
+    }
+
+    @include tablet-p() {
+        padding-bottom: wv-768(32px);
+    }
+
+    @include mobile() {
+        padding-bottom: wv-375(32px);
+    }
+}
+
+.sign {
+    @include sign;
+}
+
+.info {
+    @include p1-bold;
+    color: $black;
+}
+
+.mapLink {
+    display: block;
+    @include p2-bold;
+    @include flex(row, null, center);
+    cursor: pointer;
+
+    @include tablet-p() {
+        margin-top: wv-768(60px);
+    }
+
+    @include mobile() {
+        margin-top: wv-375(40px);
+    }
+
+    &__icon {
+        width: wv-1600(15px);
+        height: wv-1600(15px);
+        margin-right: wv-1600(10px);
+
+        @include tablet() {
+            width: wv-1200(15px);
+            height: wv-1200(15px);
+            margin-right: wv-1200(10px);
+        }
+
+        @include tablet-l() {
+            width: wv-768(15px);
+            height: wv-768(15px);
+            margin-right: wv-768(10px);
+        }
+
+        @include tablet-p() {
+            width: wv-768(15px);
+            height: wv-768(15px);
+            margin-right: wv-768(10px);
+        }
+
+        @include mobile() {
+            width: wv-375(15px);
+            height: wv-375(15px);
+            margin-right: wv-375(10px);
+        }
+    }
+}
+
+.activeLink {
+    color: $beige;
+
+    svg path {
+        fill: $beige;
+    }
+
+    svg rect {
+        stroke: $beige;
+    }
+}
+
+.route {
+    background-color: $light-beige;
+    padding: wv-1600(20px);
+    width: fit-content;
+    position: absolute;
+    bottom: wv-1600(100px);
+
+    @include laptop() {
+        bottom: wv-1200(100px);
+    }
+
+    @include tablet() {
+        padding: wv-1200(20px);
+    }
+
+    @include tablet-l() {
+        padding: wv-768(20px);
+    }
+
+    @include tablet-p() {
+        padding: wv-768(20px);
+        bottom: wv-768(-110px);
+        z-index: 10;
+    }
+
+    @include mobile() {
+        padding: wv-375(15px);
+        bottom: wv-375(-115px);
+        z-index: 10;
+    }
+
+    a:first-child {
+        padding-bottom: wv-1600(15px);
+
+        @include tablet() {
+            padding-bottom: wv-1200(15px);
+        }
+
+        @include tablet-l() {
+            padding-bottom: wv-768(15px);
+        }
+
+        @include tablet-p() {
+            padding-bottom: wv-768(15px);
+        }
+
+        @include mobile() {
+            padding-bottom: wv-375(15px);
+        }
+    }
+
+    &__link {
+        display: block;
+        @include p2;
+        opacity: 0.8;
+        @include flex(row, null, center);
+
+        svg path {
+            fill: $black;
+        }
+    }
+
+    &__icon {
+        width: wv-1600(40px);
+        height: wv-1600(40px);
+        margin-right: wv-1600(10px);
+
+        @include tablet() {
+            width: wv-1200(40px);
+            height: wv-1200(40px);
+            margin-right: wv-1200(10px);
+        }
+
+        @include tablet-l() {
+            width: wv-768(40px);
+            height: wv-768(40px);
+            margin-right: wv-768(10px);
+        }
+
+        @include tablet-p() {
+            width: wv-768(40px);
+            height: wv-768(40px);
+            margin-right: wv-768(10px);
+        }
+
+        @include mobile() {
+            width: wv-375(40px);
+            height: wv-375(40px);
+            margin-right: wv-375(10px);
+        }
+    }
+}

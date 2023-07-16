@@ -1,0 +1,188 @@
+@import 'styles/vars';
+
+.visualcomplex {
+    padding-top: wv-1600(30px);
+    transform: translateX(wv-1600(-80px));
+    position: relative;
+    &__genplan {
+        width: wv-1600(1050.1px);
+        height: wv-1600(636.89px);
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__link {
+        position: absolute;
+        z-index: 10;
+        right: wv-1600(-110px);
+        top: wv-1600(0px);
+    }
+
+    &__visible {
+        opacity: 0;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+            opacity: 1;
+            fill: rgba(206, 146, 112, 0.4) !important;
+            stroke: rgb(206, 146, 112) !important;
+        }
+    }
+
+    &__building {
+        opacity: 0;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+            opacity: 1;
+            fill: rgba(206, 146, 112, 0.5) !important;
+            stroke: rgb(206, 146, 112) !important;
+        }
+    }
+
+    &__numbers {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: wv-1600(40px);
+        height: wv-1600(40px);
+        border-radius: 50%;
+        background-color: $white;
+        border: 1px solid $light-grey;
+        color: $black;
+
+        font-weight: 600;
+        font-size: wv-1600(16px);
+        line-height: 120%;
+
+        &:nth-child(2) {
+            bottom: wv-1600(195px);
+            left: wv-1600(128px);
+        }
+        &:nth-child(3) {
+            top: wv-1600(337px);
+            left: wv-1600(59px);
+        }
+        &:nth-child(4) {
+            top: wv-1600(262px);
+            left: wv-1600(144px);
+        }
+        &:nth-child(5) {
+            top: wv-1600(207px);
+            left: wv-1600(246px);
+        }
+        &:nth-child(6) {
+            top: wv-1600(177px);
+            left: wv-1600(350px);
+        }
+        &:nth-child(7) {
+            top: wv-1600(217px);
+            left: wv-1600(418px);
+        }
+        &:nth-child(8) {
+            top: wv-1600(146px);
+            left: wv-1600(515px);
+        }
+        &:nth-child(9) {
+            top: wv-1600(77px);
+            right: wv-1600(402px);
+        }
+        &:nth-child(10) {
+            top: wv-1600(0px);
+            right: wv-1600(309px);
+        }
+        &:nth-child(11) {
+            top: wv-1600(172px);
+            right: wv-1600(63px);
+        }
+    }
+
+    &__numbers__hidden {
+        background-color: $almost-white;
+        border: 1px solid $almost-white;
+        color: $grey;
+    }
+
+    &__showed {
+        background-color: $beige;
+        border: 1px solid $beige;
+        color: $white;
+    }
+
+    &__soonSell {
+        @include flex(row, null, center);
+        position: absolute;
+        top: wv-1600(-50px);
+        z-index: 10;
+        padding: wv-1600(6px) wv-1600(10px);
+        @include p2;
+        width: max-content;
+        background: $black;
+        color: $white;
+
+        &::after {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-45%);
+            border: solid transparent;
+            content: '';
+            z-index: 10;
+            border-color: rgba(36, 41, 46, 0);
+            border-top-color: #24292e;
+            border-width: 8px;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        z-index: 20;
+        width: wv-1600(20px);
+        height: wv-1600(20px);
+        margin-left: wv-1600(10px);
+
+        @include tablet() {
+            width: wv-1200(20px);
+            height: wv-1200(20px);
+            margin-left: wv-1200(10px);
+        }
+
+        @include tablet() {
+            width: wv-1600(20px);
+            height: wv-1600(20px);
+            margin-left: wv-1600(10px);
+        }
+
+        @include tablet-l() {
+            width: wv-768(20px);
+            height: wv-768(20px);
+            margin-left: wv-768(10px);
+        }
+
+        @include tablet-p() {
+            width: wv-768(20px);
+            height: wv-768(20px);
+            margin-left: wv-768(10px);
+        }
+
+        path {
+            fill: $almost-white;
+        }
+        path:nth-child(2) {
+            stroke: $almost-white;
+        }
+    }
+}
+
+.formwrapper {
+    @include wrapper-form-outer;
+
+    &__inner {
+        @include wrapper-form-inner;
+    }
+}

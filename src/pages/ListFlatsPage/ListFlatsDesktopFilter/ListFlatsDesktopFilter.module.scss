@@ -1,0 +1,106 @@
+@import '../../../../styles/vars';
+
+.listRight {
+    width: wv-1600(390px);
+    position: sticky;
+    height: calc(100vh - 18vh);
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: -webkit-sticky;
+
+    top: wv-1600(120px);
+    z-index: 7;
+
+    &__container {
+        width: wv-1600(372px);
+    }
+
+    &::-webkit-scrollbar {
+        width: wv-1600(4px);
+        height: wv-1600(200px);
+        cursor: pointer;
+
+        @include tablet-p() {
+            width: wv-768(4px);
+            height: wv-768(100px);
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        background: white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #939598; /* цвет бегунка */
+        border-radius: 0; /* округлось бегунка */
+        border: wv-1600(4px) solid #939598;
+        cursor: pointer;
+    }
+
+    @include tablet_mw() {
+        width: 100%;
+        position: static;
+        height: max-content;
+    }
+
+    &__modal {
+        position: relative;
+    }
+    &__accordion {
+        display: flex;
+        flex-direction: column;
+        gap: wv-1600(35px);
+        margin-bottom: wv-1600(35px);
+
+        @include tablet_mw() {
+            width: wv-768(319px);
+        }
+
+        &__revert {
+            transform: rotate(180deg);
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: wv-1600(12px);
+            border-bottom: 1px solid rgba(36, 41, 46, 0.2);
+            cursor: pointer;
+        }
+
+        &__name {
+            @include p2-bold;
+            color: $black;
+        }
+    }
+
+    &__advantages {
+        margin-top: wv-1600(42px);
+        margin-bottom: wv-1600(40px);
+
+        &__name {
+            @include p2-bold;
+            color: $black;
+            margin-bottom: wv-1600(25px);
+        }
+    }
+
+    &__purchaseBtn {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: wv-1600(15px) wv-1600(0px);
+        border: wv-1600(1.5px) solid $beige;
+        background-color: transparent;
+        @include p3-bold;
+        color: $beige;
+        transition: all 0.5s ease;
+        cursor: pointer;
+
+        &:hover {
+            border: wv-1600(1.5px) solid $black;
+            color: $black;
+        }
+    }
+}

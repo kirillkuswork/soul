@@ -1,0 +1,28 @@
+@import 'styles/vars';
+
+.floorPageLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title {
+        margin: wv-1600(20px) 0 wv-1600(60px) 0;
+        @include h1;
+        color: $black;
+    }
+
+    &__descriptions {
+        display: flex;
+        flex-direction: column;
+        gap: wv-1600(5px);
+    }
+
+    &__description {
+        @include p2;
+        color: $black;
+
+        &:nth-child(3) {
+            color: $beige;
+        }
+    }
+}

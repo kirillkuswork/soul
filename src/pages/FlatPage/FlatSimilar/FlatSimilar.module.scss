@@ -1,0 +1,47 @@
+@import 'styles/vars';
+
+.flatSimilar {
+    padding-top: wv-1600(140px);
+    padding-bottom: wv-1600(100px);
+
+    @include mobile() {
+        background-color: $medium-grey;
+        padding-top: wv-375(40px);
+    }
+
+    &__title {
+        @include h2;
+        margin-bottom: wv-1600(40px);
+
+        @include mobile() {
+            margin-bottom: wv-375(20px);
+        }
+    }
+
+    &__flats {
+        display: flex;
+        flex-direction: column;
+        padding-top: wv-1600(10px);
+        gap: wv-1600(10px);
+
+        @include tablet-p() {
+            gap: wv-768(8px);
+        }
+
+        @include mobile() {
+            gap: wv-375(8px);
+        }
+    }
+
+    &__container {
+        width: wv-1600(1010px);
+
+        @include tablet-p() {
+            width: 100%;
+        }
+
+        @include mobile() {
+            width: 100%;
+        }
+    }
+}

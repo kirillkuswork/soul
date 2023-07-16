@@ -1,0 +1,402 @@
+@import 'styles/vars';
+
+.container {
+    max-width: 100vw;
+    overflow-x: hidden;
+    padding-top: wv-1600(140px);
+
+    @include laptop() {
+        padding-top: wv-1200(140px);
+    }
+
+    @include tablet() {
+        padding-top: wv-1600(140px);
+    }
+
+    @include tablet-l() {
+        padding-top: wv-768(120px);
+    }
+
+    @include tablet-p() {
+        padding-top: wv-768(120px);
+    }
+
+    @include mobile() {
+        padding-top: wv-375(75px);
+    }
+}
+
+.info {
+    h3 {
+        @include h3;
+    }
+
+    h2 {
+        @include h2;
+    }
+
+    padding: wv-1600(55px) wv-1600(60px) wv-1600(97px) wv-1600(60px);
+
+    @include laptop() {
+        padding: wv-1200(55px) wv-1200(60px) wv-1200(97px) wv-1200(60px);
+    }
+
+    @include tablet() {
+        padding: wv-1600(55px) wv-1600(60px) wv-1600(97px) wv-1600(60px);
+    }
+
+    @include tablet-l() {
+        padding: wv-768(45px) wv-768(40px) wv-768(60px) wv-768(40px);
+    }
+
+    @include tablet-p() {
+        padding: wv-768(45px) wv-768(40px) wv-768(60px) wv-768(40px);
+    }
+
+    @include mobile() {
+        padding: wv-375(30px) wv-375(15px) wv-375(40px) wv-375(15px);
+    }
+}
+
+.text {
+    margin-top: wv-1600(66px);
+
+    @include laptop() {
+        margin-top: wv-1200(66px);
+    }
+
+    @include tablet() {
+        margin-top: wv-1600(66px);
+    }
+
+    @include tablet-l() {
+        margin-top: wv-768(45px);
+    }
+
+    @include tablet-p() {
+        margin-top: wv-768(45px);
+    }
+
+    @include mobile() {
+        margin-top: wv-375(30px);
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(400px, 508px));
+        column-gap: wv-1600(300px);
+        row-gap: wv-1600(15px);
+
+        @include laptop() {
+            grid-template-columns: repeat(2, minmax(400px, 508px));
+            column-gap: wv-1200(300px);
+            row-gap: wv-1200(15px);
+        }
+
+        @include tablet() {
+            grid-template-columns: repeat(2, minmax(400px, 508px));
+            column-gap: wv-1600(300px);
+            row-gap: wv-1600(15px);
+        }
+
+        @include tablet-l() {
+            display: flex;
+            flex-direction: column;
+            gap: wv-768(15px);
+        }
+
+        @include tablet-p() {
+            display: flex;
+            flex-direction: column;
+            gap: wv-768(15px);
+        }
+
+        @include mobile() {
+            display: flex;
+            flex-direction: column;
+            gap: wv-375(15px);
+        }
+    }
+
+    li {
+        @include p2;
+        @include beige-rectangle-hyphens;
+    }
+}
+
+.slider {
+    padding-bottom: wv-1600(140px);
+
+    @include laptop() {
+        padding-bottom: wv-1200(140px);
+    }
+
+    @include tablet() {
+        padding-bottom: wv-1600(140px);
+    }
+
+    @include tablet-l() {
+        padding-bottom: wv-768(105px);
+    }
+
+    @include tablet-p() {
+        padding-bottom: wv-768(105px);
+    }
+
+    @include mobile() {
+        padding-bottom: wv-375(80px);
+    }
+
+    &_length {
+        @include p2;
+        color: $grey;
+        margin-left: wv-1600(60px);
+        margin-bottom: wv-1600(57px);
+
+        @include laptop() {
+            margin-left: wv-1200(60px);
+            margin-bottom: wv-1200(57px);
+        }
+
+        @include tablet() {
+            margin-left: wv-1600(60px);
+            margin-bottom: wv-1600(57px);
+        }
+
+        @include tablet-l() {
+            margin-left: wv-768(40px);
+            margin-bottom: wv-768(25px);
+        }
+
+        @include tablet-p() {
+            margin-left: wv-768(40px);
+            margin-bottom: wv-768(25px);
+        }
+
+        @include mobile() {
+            margin-left: wv-375(15px);
+            margin-bottom: wv-375(30px);
+        }
+    }
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    padding-left: wv-1600(60px);
+    padding-bottom: wv-1600(17px);
+    gap: wv-1600(80px);
+    margin-bottom: wv-1600(60px);
+    border-bottom: $grey-border;
+
+    @include laptop() {
+        padding-left: wv-1200(60px);
+        padding-bottom: wv-1200(17px);
+        gap: wv-1200(80px);
+        margin-bottom: wv-1200(60px);
+    }
+
+    @include tablet() {
+        padding-left: wv-1600(60px);
+        padding-bottom: wv-1600(17px);
+        gap: wv-1600(80px);
+        margin-bottom: wv-1600(60px);
+    }
+
+    @include tablet-l() {
+        padding-left: wv-768(40px);
+        padding-bottom: wv-768(12px);
+        gap: wv-768(50px);
+        margin-bottom: wv-768(45px);
+    }
+
+    @include tablet-p() {
+        padding-left: wv-768(40px);
+        padding-bottom: wv-768(12px);
+        gap: wv-768(50px);
+        margin-bottom: wv-768(45px);
+    }
+
+    @include mobile() {
+        padding-left: wv-375(15px);
+        padding-bottom: wv-375(12px);
+        gap: wv-375(25px);
+        margin-bottom: wv-375(30px);
+    }
+
+    button {
+        @include p2-bold;
+        cursor: pointer;
+        position: relative;
+
+        @media screen and (min-width: 1023px) {
+            &:hover {
+                color: $beige;
+            }
+        }
+    }
+
+    &_slider::after,
+    &_videos::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+        height: wv-1600(2px);
+        bottom: wv-1600(-19px);
+        background-color: $active;
+
+        @include laptop() {
+            height: wv-1200(2px);
+            bottom: wv-1200(-19px);
+        }
+
+        @include tablet() {
+            height: wv-1600(2px);
+            bottom: wv-1600(-19px);
+        }
+
+        @include tablet-l() {
+            height: wv-768(2px);
+            bottom: wv-768(-14px);
+        }
+
+        @include tablet-p() {
+            height: wv-768(2px);
+            bottom: wv-768(-14px);
+        }
+
+        @include mobile() {
+            height: wv-375(2px);
+            bottom: wv-375(-14px);
+        }
+    }
+}
+
+.video {
+    margin-left: wv-1600(60px) !important;
+    margin-bottom: wv-1600(140px);
+    width: wv-1600(1480px) !important;
+    height: wv-1600(830px) !important;
+
+    div {
+        background-size: cover !important;
+    }
+
+    @include laptop() {
+        margin-left: wv-1200(60px) !important;
+        margin-bottom: wv-1200(140px);
+        width: wv-1200(1090px) !important;
+        height: wv-1200(768px) !important;
+    }
+
+    @include tablet() {
+        margin-left: wv-1600(60px) !important;
+        margin-bottom: wv-1600(140px);
+        width: wv-1600(1480px) !important;
+        height: wv-1600(830px) !important;
+    }
+
+    @include tablet-l() {
+        margin-left: wv-768(40px) !important;
+        margin-bottom: wv-768(105px);
+        width: wv-768(688px) !important;
+        height: wv-768(385px) !important;
+    }
+
+    @include tablet-p() {
+        margin-left: wv-768(40px) !important;
+        margin-bottom: wv-768(105px);
+        width: wv-768(688px) !important;
+        height: wv-768(385px) !important;
+    }
+
+    @include mobile() {
+        margin-left: wv-375(15px) !important;
+        margin-bottom: wv-375(80px);
+        width: wv-375(345px) !important;
+        height: wv-375(193px) !important;
+    }
+}
+
+.btn {
+    width: wv-1600(200px) !important;
+    height: wv-1600(200px) !important;
+    border: wv-1600(3px) solid $white !important;
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+
+    @include laptop() {
+        width: wv-1200(200px) !important;
+        height: wv-1200(200px) !important;
+        border: wv-1200(3px) solid $white !important;
+    }
+
+    @include tablet() {
+        width: wv-1600(200px) !important;
+        height: wv-1600(200px) !important;
+        border: wv-1600(3px) solid $white !important;
+    }
+
+    @include tablet-l() {
+        width: wv-768(100px) !important;
+        height: wv-768(100px) !important;
+        border: wv-768(2px) solid $white !important;
+    }
+
+    @include tablet-p() {
+        width: wv-768(100px) !important;
+        height: wv-768(100px) !important;
+        border: wv-768(2px) solid $white !important;
+    }
+
+    @include mobile() {
+        width: wv-375(60px) !important;
+        height: wv-375(60px) !important;
+        border: wv-375(2px) solid $white !important;
+    }
+
+    &:hover {
+        transition: all 0.2s ease-out !important;
+        background-color: rgba(43, 51, 63, 0.7) !important;
+    }
+
+    &::before {
+        content: '' !important;
+        width: wv-1600(90px) !important;
+        height: wv-1600(90px) !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%);
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 46L28.5 74.5788L28.5 17.4212L78 46Z' fill='white'/%3E%3C/svg%3E%0A");
+
+        @include laptop() {
+            width: wv-1200(90px) !important;
+            height: wv-1200(90px) !important;
+        }
+
+        @include tablet() {
+            width: wv-1600(90px) !important;
+            height: wv-1600(90px) !important;
+        }
+
+        @include tablet-l() {
+            width: wv-768(42px) !important;
+            height: wv-768(42px) !important;
+        }
+
+        @include tablet-p() {
+            width: wv-768(42px) !important;
+            height: wv-768(42px) !important;
+        }
+
+        @include mobile() {
+            width: wv-375(34px) !important;
+            height: wv-375(34px) !important;
+        }
+    }
+}

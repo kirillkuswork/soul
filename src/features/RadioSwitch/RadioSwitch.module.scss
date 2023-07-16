@@ -1,0 +1,282 @@
+@import '../../../styles/vars';
+
+.radioSwitch {
+   &__buttons {
+      display: flex;
+      align-items: center;
+      gap: wv-1600(10px);
+
+      @include mobile() {
+         gap: 0;
+      }
+
+      & button {
+         display: block;
+         width: wv-1600(53.67px);
+         height: wv-1600(48px);
+         @include p3-bold;
+         text-align: center;
+         letter-spacing: 0.02em;
+         color: $black;
+         transition: all 0.3s ease;
+         border: wv-1600(1.5px) solid $light-grey;
+
+         cursor: pointer;
+
+         &.radioSwitch__selected {
+            border: wv-1600(1.5px) solid $beige;
+            color: $beige;
+            @include mobile() {
+               border: wv-375(1.5px) solid $beige;
+            }
+         }
+
+         &.radioSwitch__disabled {
+            opacity: 0.5;
+            cursor: default;
+
+            @media (any-hover: hover) {
+               &:hover {
+                  background: $bg-color;
+                  color: $black;
+               }
+            }
+         }
+
+         @media (any-hover: hover) {
+            &:hover {
+               color: $beige;
+            }
+         }
+
+         @include tablet() {
+            width: wv-1200(44.83px);
+            height: wv-1200(44px);
+            font-size: wv-1200(15px);
+            line-height: wv-1200(16px);
+         }
+
+         @include tablet-l() {
+            width: wv-768(44.83px);
+            height: wv-768(44px);
+            font-size: wv-768(15px);
+            line-height: 120%;
+         }
+
+         @include tablet-p() {
+            width: wv-768(44.83px);
+            height: wv-768(44px);
+            font-size: wv-768(15px);
+            line-height: 120%;
+         }
+
+         @include mobile() {
+            width: wv-375(49.71px);
+            height: wv-375(44px);
+            font-size: wv-375(15px);
+            line-height: 120%;
+            border: wv-375(1.5px) solid $light-grey;
+         }
+      }
+
+      & button + button {
+         margin-left: wv-1600(5px);
+
+         @include tablet() {
+            margin-left: wv-1200(1px);
+         }
+
+         @include tablet-l() {
+            margin-left: wv-768(1px);
+         }
+
+         @include tablet-p() {
+            margin-left: wv-768(1px);
+         }
+
+         @include mobile() {
+            margin-left: wv-375(10px);
+         }
+      }
+   }
+
+   &__checkboxes {
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+      grid-row-gap: wv-1600(21px);
+      grid-column-gap: wv-1600(29px);
+
+      // @include tablet() {
+      //   grid-template-columns: repeat(1, 1fr);
+      //   grid-row-gap: wv-1200(12px);
+      // }
+
+      // @include tablet-l() {
+      //   grid-template-columns: repeat(1, 1fr);
+      //   grid-row-gap: wv-768(12px);
+      // }
+
+      @include tablet-p() {
+         grid-template-columns: repeat(2, 1fr);
+         grid-row-gap: wv-768(12px);
+      }
+
+      @include mobile() {
+         grid-template-columns: repeat(2, 1fr);
+         grid-row-gap: wv-375(12px);
+      }
+
+      & button {
+         position: relative;
+         display: flex;
+         font-style: normal;
+         font-weight: 300;
+         font-size: wv-1600(14px);
+         line-height: 130%;
+         letter-spacing: 0.01em;
+         color: $black;
+         padding-left: wv-1600(32px);
+         width: wv-1600(172px);
+         text-align: left;
+         cursor: pointer;
+
+         // @include tablet() {
+         //   font-size: wv-1200(16px);
+         //   padding-left: wv-1200(32px);
+         // }
+
+         // @include tablet-l() {
+         //   font-size: wv-768(16px);
+         //   padding-left: wv-768(32px);
+         // }
+
+         @include tablet-p() {
+            font-size: wv-768(13px);
+            padding-left: wv-768(32px);
+            width: wv-768(190px);
+         }
+
+         @include mobile() {
+            font-size: wv-375(14px);
+            padding-left: wv-375(32px);
+            width: wv-375(172px);
+         }
+
+         &::after {
+            position: absolute;
+            content: '';
+            width: wv-1600(20px);
+            height: wv-1600(20px);
+            border: 1px solid $dark-blue;
+            left: 0;
+            top: 0;
+            transition: all 0.2s ease;
+
+            // @include tablet() {
+            //   width: wv-1200(20px);
+            //   height: wv-1200(20px);
+            // }
+
+            // @include tablet-l() {
+            //   width: wv-768(20px);
+            //   height: wv-768(20px);
+            // }
+
+            @include tablet-p() {
+               width: wv-768(20px);
+               height: wv-768(20px);
+               top: wv-768(-2px);
+            }
+
+            @include mobile() {
+               width: wv-375(20px);
+               height: wv-375(20px);
+            }
+         }
+
+         &::before {
+            transition: all 0.2s ease;
+         }
+
+         @media (any-hover: hover) {
+            &:hover:not(:disabled) {
+               &::after {
+                  border: 1px solid $dark-blue;
+                  background: $dark-blue;
+               }
+            }
+         }
+
+         &:disabled {
+            opacity: 0.5 !important;
+            cursor: default;
+         }
+
+         &.radioSwitch__selected {
+            &::after {
+               border: 1px solid $dark-blue;
+               background: $dark-blue;
+            }
+
+            &::before {
+               position: absolute;
+               content: '';
+               border-bottom: 2px solid #ffffff;
+               border-left: 2px solid #ffffff;
+               width: wv-1600(9px);
+               height: wv-1600(7px);
+               left: wv-1600(5px);
+               top: wv-1600(5px);
+               z-index: 2;
+               transform: rotate(-45deg);
+
+               // @include tablet() {
+               //   font-size: wv-1200(16px);
+               //   width: wv-1200(9px);
+               //   height: wv-1200(7px);
+               //   left: wv-1200(5px);
+               //   top: wv-1200(5px);
+               // }
+
+               // @include tablet-l() {
+               //   font-size: wv-768(16px);
+               //   width: wv-768(9px);
+               //   height: wv-768(7px);
+               //   left: wv-768(5px);
+               //   top: wv-768(5px);
+               // }
+
+               @include tablet-p() {
+                  font-size: wv-768(16px);
+                  width: wv-768(9px);
+                  height: wv-768(7px);
+                  left: wv-768(5px);
+                  top: wv-768(2px);
+               }
+
+               @include mobile() {
+                  font-size: wv-375(16px);
+                  width: wv-375(9px);
+                  height: wv-375(7px);
+                  left: wv-375(5px);
+                  top: wv-375(5px);
+               }
+            }
+         }
+
+         @media (any-hover: hover) {
+            &:hover .radioSwitch__selected {
+               &::after {
+                  border: 1px solid $black;
+                  background: transparent;
+               }
+
+               &::before {
+                  border-bottom: 2px solid $black;
+                  border-left: 2px solid $black;
+               }
+            }
+         }
+      }
+   }
+}

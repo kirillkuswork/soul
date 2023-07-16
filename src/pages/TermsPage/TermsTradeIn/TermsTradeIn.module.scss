@@ -1,0 +1,83 @@
+@import 'styles/vars';
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: wv-1600(80px) wv-1600(60px) wv-1600(140px) wv-1600(60px);
+
+    @include laptop() {
+        padding: wv-1200(80px) wv-1200(60px) wv-1200(140px) wv-1200(60px);
+    }
+
+    @include tablet-l() {
+        flex-direction: column;
+        gap: wv-768(105px);
+        padding: wv-768(60px) 0 wv-768(105px) wv-768(40px);
+    }
+
+    @include tablet-p() {
+        flex-direction: column;
+        gap: wv-768(45px);
+        padding: wv-768(60px) 0 wv-768(105px) wv-768(40px);
+    }
+
+    @include mobile() {
+        flex-direction: column;
+        gap: 0;
+        padding: wv-375(40px) 0 wv-375(80px) wv-375(15px);
+    }
+}
+
+.info {
+    width: 100%;
+    max-width: wv-1600(469px);
+
+    @include laptop() {
+        max-width: wv-1200(469px);
+    }
+
+    @include tablet-l() {
+        max-width: wv-768(600px);
+    }
+
+    @include tablet-p() {
+        max-width: wv-768(600px);
+    }
+
+    @include mobile() {
+        max-width: 100%;
+    }
+
+    &_title {
+        @include h3;
+        margin-bottom: wv-1600(60px);
+
+        @include laptop() {
+            margin-bottom: wv-1200(60px);
+        }
+
+        @include tablet-l() {
+            @include h2;
+            margin-bottom: wv-768(45px);
+        }
+
+        @include tablet-p() {
+            @include h2;
+            margin-bottom: wv-768(45px);
+        }
+
+        @include mobile() {
+            @include h2;
+            margin-bottom: wv-375(30px);
+        }
+    }
+
+    &_text {
+        @include p1;
+
+        @include mobile() {
+            margin-right: wv-375(15px);
+            margin-bottom: wv-375(40px);
+        }
+    }
+}

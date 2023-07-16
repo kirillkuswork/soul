@@ -1,0 +1,139 @@
+@import 'styles/vars';
+
+.img {
+    position: relative;
+    width: wv-1600(1292px) !important;
+    height: wv-1600(750px) !important;
+
+    @include laptop() {
+        width: wv-1200(892px) !important;
+        height: wv-1200(550px) !important;
+    }
+
+    @include tablet() {
+        width: wv-1600(1292px) !important;
+        height: wv-1600(750px) !important;
+    }
+
+    @include tablet-l() {
+        width: wv-768(688px) !important;
+        height: wv-768(386px) !important;
+    }
+
+    @include tablet-p() {
+        width: wv-768(688px) !important;
+        height: wv-768(386px) !important;
+    }
+
+    @include mobile() {
+        width: wv-375(345px) !important;
+        height: wv-375(194px) !important;
+    }
+
+    img {
+        object-fit: cover;
+    }
+
+    &_wide {
+        @include laptop() {
+            width: calc(100vw - wv-1200(230px)) !important;
+            height: wv-1200(550px) !important;
+        }
+    }
+}
+
+.buttonsContainer {
+    display: flex;
+    position: absolute;
+    z-index: 5;
+    bottom: wv-1600(50px);
+    right: wv-1600(50px);
+
+    @include laptop() {
+        bottom: wv-1200(50px);
+        right: wv-1200(50px);
+    }
+
+    @include tablet() {
+        bottom: wv-1600(50px);
+        right: wv-1600(50px);
+    }
+
+    @include tablet-l() {
+        bottom: wv-768(25px);
+        right: wv-768(25px);
+    }
+
+    @include tablet-p() {
+        bottom: wv-768(25px);
+        right: wv-768(25px);
+    }
+
+    @include mobile() {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: wv-375(20px);
+    }
+
+    button {
+        cursor: pointer;
+
+        line {
+            stroke: $white;
+        }
+        path {
+            fill: $white;
+        }
+
+        @include mobile() {
+            bottom: wv-375(50px);
+            right: wv-375(50px);
+
+            line {
+                stroke: $black;
+            }
+            path {
+                fill: $black;
+            }
+        }
+
+        @media not all and (max-width: 1024px) and (hover: none) {
+            &:hover {
+                line {
+                    stroke: $beige;
+                }
+                path {
+                    fill: $beige;
+                }
+            }
+        }
+    }
+
+    button:first-of-type {
+        margin-right: wv-1600(20px);
+
+        @include laptop() {
+            margin-right: wv-1200(20px);
+        }
+
+        @include tablet() {
+            margin-right: wv-1600(20px);
+        }
+
+        @include tablet-l() {
+            margin-right: wv-768(20px);
+        }
+
+        @include tablet-p() {
+            margin-right: wv-768(20px);
+        }
+
+        @include mobile() {
+            margin-right: wv-375(20px);
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@import "styles/vars";
+
+.container {
+  padding: wv-1600(80px) wv-1600(154px) wv-1600(140px) wv-1600(60px);
+}
+
+.title {
+  color: $black;
+  @include large-p;
+  margin-bottom: wv-1600(60px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, wv-1600(543px));
+  column-gap: wv-1600(301px);
+  row-gap: wv-1600(60px);
+
+  &_title {
+    color: $black;
+    @include p1-bold;
+    margin-bottom: wv-1600(20px);
+  }
+}

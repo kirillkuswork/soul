@@ -1,0 +1,12 @@
+@import '../../../../styles/vars';
+
+.flatInfo {
+   padding-top: wv-768(135px);
+   margin-bottom: wv-1600(80px);
+   
+   @include mobile() {
+      padding-top: wv-375(85px);
+      margin-bottom: wv-375(40px);
+   
+   }
+}

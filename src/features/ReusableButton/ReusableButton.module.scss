@@ -1,0 +1,123 @@
+@import 'styles/vars';
+
+.btn {
+    @include p1-bold;
+    line-height: 120%;
+    white-space: nowrap;
+    color: $white;
+    cursor: pointer;
+    width: fit-content;
+    border: 1.5px solid $white;
+    padding: wv-1600(20px) wv-1600(50px);
+
+    @include tablet() {
+        padding: wv-1200(20px) wv-1200(50px);
+    }
+
+    @include tablet() {
+        padding: wv-1600(20px) wv-1600(40px);
+    }
+
+    @include tablet-l() {
+        padding: wv-768(20px) wv-768(50px);
+        font-size: wv-768(16px);
+    }
+
+    @include tablet-p() {
+        padding: wv-768(20px) wv-768(50px);
+        font-size: wv-768(16px);
+    }
+
+    @include mobile() {
+        width: 100%;
+        padding: wv-375(20px) 0;
+    }
+
+    &__medium {
+        @include tablet() {
+            padding: wv-1200(15px) wv-1200(87px);
+        }
+
+        @include tablet() {
+            padding: wv-1600(15px) wv-1600(87px);
+        }
+
+        @include tablet-l() {
+            padding: wv-768(13.5px) wv-768(85.5px);
+            font-size: wv-768(15px);
+        }
+
+        @include tablet-p() {
+            padding: wv-768(13.5px) wv-768(85.5px);
+            font-size: wv-768(15px);
+        }
+
+        @include mobile() {
+            padding: wv-375(15px) wv-375(40px);
+            font-size: wv-375(15px);
+        }
+    }
+
+    &__blackBg {
+        color: $white;
+        background: $black;
+    }
+}
+
+.btn.disabled,
+.btnSmall.disabled {
+    color: $grey;
+    border: 1.5px solid $grey;
+}
+
+.btnSmall {
+  white-space: nowrap;
+  @include p3-bold;
+  cursor: pointer;
+  width: fit-content;
+  border: 1.5px solid $almost-white; 
+  padding: 0 wv-1600(35px);  
+  height: 100%;
+
+  @include tablet-p() {
+    font-size: 15px;
+  }
+  @include tablet() {
+    padding: 0 wv-1200(35px);  
+  }
+
+  @include tablet-l() {
+    padding:0 wv-768(35px);   
+    font-size: 15px;
+  }
+
+  @include mobile() {
+    padding:0 wv-375(35px);   
+  }
+}
+
+.black {
+    color: $black;
+    background: transparent;
+    border: 1.5px solid $black;
+}
+
+.hover {
+  height: 100%;
+  .btn:not(.disabled):hover {
+    color: $black;
+    background: $white;   
+  }
+  .btn__blackBg:not(.disabled):hover {           
+    border: 1.5px solid $black;      
+  }
+  .btnSmall:not(.disabled):hover {
+    color: $black;
+    background: $almost-white;  
+  }
+  .black:not(.disabled):hover {
+    color: $beige;
+    border: 1.5px solid $beige;
+    background: transparent;
+  }
+}

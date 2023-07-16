@@ -1,0 +1,479 @@
+@import 'styles/vars';
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    background: $blue-black;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 105px 88px 55px rgba(25, 28, 30, 0.01), 59px 49px 46px rgba(25, 28, 30, 0.03), 26px 22px 34px rgba(25, 28, 30, 0.05),
+        7px 5px 19px rgba(25, 28, 30, 0.06), 0 0 0 rgba(25, 28, 30, 0.06);
+
+    width: 100%;
+    max-width: wv-1600(1292px);
+    gap: wv-1600(208px);
+    padding: wv-1600(95px);
+
+    &__close {
+        position: absolute;
+        top: wv-1600(20px);
+        right: wv-1600(20px);
+        cursor: pointer;
+
+        @include mobile() {
+            top: wv-375(10px);
+            right: wv-375(10px);
+        }
+    }
+
+    @include tablet() {
+        max-width: wv-1200(969px);
+        gap: wv-1200(156px);
+        padding: wv-1200(72px);
+    }
+
+    @include tablet() {
+        max-width: wv-1600(1292px);
+        gap: wv-1600(208px);
+        padding: wv-1600(95px);
+    }
+
+    @include tablet-l() {
+        max-width: wv-768(688px);
+        gap: 0;
+        padding: wv-768(70px) wv-768(89px) wv-768(70px) wv-768(50px);
+    }
+
+    @include tablet-p() {
+        max-width: wv-768(688px);
+        gap: 0;
+        padding: wv-768(70px) wv-768(89px) wv-768(70px) wv-768(50px);
+    }
+
+    @include mobile() {
+        max-width: wv-375(345px);
+        gap: 0;
+        padding: wv-375(40px) wv-375(20px);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: wv-1600(714px);
+
+    @include tablet() {
+        max-width: wv-1200(714px);
+    }
+
+    @include tablet() {
+        max-width: wv-1600(714px);
+    }
+
+    @include tablet-l() {
+        max-width: 100%;
+    }
+
+    @include tablet-p() {
+        max-width: 100%;
+    }
+
+    @include mobile() {
+        max-width: 100%;
+    }
+}
+
+.icon {
+    width: wv-1600(200px);
+    opacity: 0.05;
+
+    @include tablet() {
+        width: wv-1200(200px);
+    }
+
+    @include tablet() {
+        width: wv-1600(200px);
+    }
+
+    @include tablet-l() {
+        display: none;
+    }
+
+    @include tablet-p() {
+        display: none;
+    }
+
+    @include mobile() {
+        display: none;
+    }
+}
+
+.disclaimer {
+    @include p1;
+    color: $white;
+    opacity: 0.8;
+    max-width: wv-1600(619px);
+    margin-bottom: wv-1600(83px);
+
+    @include tablet() {
+        max-width: wv-1200(465px);
+        margin-bottom: wv-1200(63px);
+    }
+
+    @include tablet() {
+        max-width: wv-1600(619px);
+        margin-bottom: wv-1600(83px);
+    }
+
+    @include tablet-l() {
+        max-width: 100%;
+        margin-bottom: wv-768(67px);
+    }
+
+    @include tablet-p() {
+        max-width: 100%;
+        margin-bottom: wv-768(67px);
+    }
+
+    @include mobile() {
+        max-width: 100%;
+        margin-bottom: wv-375(61px);
+    }
+}
+
+.checkbox {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: wv-1600(12px);
+    margin-top: wv-1600(35px);
+    margin-bottom: wv-1600(60px);
+
+    @include tablet() {
+        gap: wv-1200(12px);
+        margin-top: wv-1200(35px);
+        margin-bottom: wv-1200(60px);
+    }
+
+    @include tablet() {
+        gap: wv-1600(12px);
+        margin-top: wv-1600(35px);
+        margin-bottom: wv-1600(60px);
+    }
+
+    @include tablet-l() {
+        gap: wv-768(12px);
+        margin-top: wv-768(31px);
+        margin-bottom: wv-768(45px);
+    }
+
+    @include tablet-p() {
+        gap: wv-768(12px);
+        margin-top: wv-768(31px);
+        margin-bottom: wv-768(45px);
+    }
+
+    @include mobile() {
+        gap: wv-375(10px);
+        margin-top: wv-375(25px);
+        margin-bottom: wv-375(40px);
+    }
+
+    &__politics {
+        text-decoration: underline;
+    }
+
+    &__label {
+        @include sign;
+        cursor: pointer;
+    }
+
+    &__input {
+        cursor: pointer;
+
+        &[type='checkbox'] {
+            /* Add if not using autoprefixer */
+            -webkit-appearance: none;
+            appearance: none;
+            /* For iOS < 15 to remove gradient background */
+            background-color: transparent;
+            /* Not removed via appearance */
+            margin: 0;
+        }
+
+        &::before {
+            content: '';
+            width: wv-1600(20px);
+            height: wv-1600(20px);
+            border: 1px solid $grey;
+            position: relative;
+            display: flex;
+            transition: background-color 0.3s ease-in-out;
+
+            @include tablet() {
+                width: wv-1200(20px);
+                height: wv-1200(20px);
+            }
+
+            @include tablet() {
+                width: wv-1600(20px);
+                height: wv-1600(20px);
+            }
+
+            @include tablet-l() {
+                width: wv-768(20px);
+                height: wv-768(20px);
+            }
+
+            @include tablet-p() {
+                width: wv-768(20px);
+                height: wv-768(20px);
+            }
+
+            @include mobile() {
+                width: wv-375(15px);
+                height: wv-375(15px);
+            }
+        }
+
+        &:hover::before {
+            background: $white;
+            border: 1px solid $white;
+        }
+
+        &:checked:hover::before {
+            border: 1px solid $white;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.625L5.23077 8L12 1' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+        }
+
+        &:checked::before {
+            background-color: $white;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: background-color 0.3s ease-in-out;
+            background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.625L5.23077 8L12 1' stroke='%23212F3E' stroke-width='2'/%3E%3C/svg%3E%0A");
+        }
+    }
+}
+
+.input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    border-bottom: $white-border;
+    color: $white;
+    transition: all 0.2s ease-in;
+    padding-bottom: wv-1600(15px);
+
+    @include tablet() {
+        padding-bottom: wv-1200(15px);
+    }
+
+    @include tablet() {
+        padding-bottom: wv-1600(15px);
+    }
+
+    @include tablet-l() {
+        padding-bottom: wv-768(15px);
+    }
+
+    @include tablet-p() {
+        padding-bottom: wv-768(15px);
+    }
+
+    @include mobile() {
+        padding-bottom: wv-375(15px);
+    }
+
+    -webkit-text-fill-color: $white;
+    caret-color: $white;
+
+    &:focus-visible {
+        outline: none;
+        border-bottom: $white-border;
+    }
+
+    &:focus {
+        transition: all 0.8s ease-in;
+        padding-bottom: wv-1600(15px);
+
+        @include tablet() {
+            padding-bottom: wv-1200(15px);
+        }
+
+        @include tablet() {
+            padding-bottom: wv-1600(15px);
+        }
+
+        @include tablet-l() {
+            padding-bottom: wv-768(15px);
+        }
+
+        @include tablet-p() {
+            padding-bottom: wv-768(15px);
+        }
+
+        @include mobile() {
+            padding-bottom: wv-375(15px);
+        }
+    }
+
+    &:focus ~ &__label,
+    &:not(:placeholder-shown).input:not(:focus) ~ &__label {
+        @include sign;
+        transition: all 0.2s ease-in;
+        top: wv-1600(-25px);
+
+        @include tablet() {
+            top: wv-1200(-25px);
+        }
+
+        @include tablet() {
+            top: wv-1600(-25px);
+        }
+
+        @include tablet-l() {
+            top: wv-768(-25px);
+        }
+
+        @include tablet-p() {
+            top: wv-768(-25px);
+        }
+
+        @include mobile() {
+            top: wv-375(-25px);
+        }
+    }
+
+    &:not(:placeholder-shown):hover {
+        cursor: pointer;
+    }
+
+    &:focus + &__label {
+        @include sign;
+        transition: all 0.2s ease-in;
+        top: wv-1600(-25px);
+
+        @include tablet() {
+            top: wv-1200(-25px);
+        }
+
+        @include tablet() {
+            top: wv-1600(-25px);
+        }
+
+        @include tablet-l() {
+            top: wv-768(-25px);
+        }
+
+        @include tablet-p() {
+            top: wv-768(-25px);
+        }
+
+        @include mobile() {
+            top: wv-375(-25px);
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        position: relative;
+
+        &:nth-of-type(2) {
+            margin-top: wv-1600(58px);
+
+            @include tablet() {
+                margin-top: wv-1200(58px);
+            }
+
+            @include tablet() {
+                margin-top: wv-1600(58px);
+            }
+
+            @include tablet-l() {
+                margin-top: wv-768(48px);
+            }
+
+            @include tablet-p() {
+                margin-top: wv-768(48px);
+            }
+
+            @include mobile() {
+                margin-top: wv-375(46px);
+            }
+        }
+    }
+
+    &__margin {
+        margin-bottom: wv-1600(58px);
+
+        @include tablet() {
+            margin-bottom: wv-1200(58px);
+        }
+
+        @include tablet() {
+            margin-bottom: wv-1600(58px);
+        }
+
+        @include tablet-l() {
+            margin-bottom: wv-768(48px);
+        }
+
+        @include tablet-p() {
+            margin-bottom: wv-768(48px);
+        }
+
+        @include mobile() {
+            margin-bottom: wv-375(46px);
+        }
+    }
+
+    &__label {
+        @include p1;
+        color: $white;
+        opacity: 0.6;
+        position: absolute;
+        cursor: text;
+        top: 0;
+
+        &:hover {
+            transition: all 0.8s ease-in;
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+}
+
+.error {
+    color: $orange;
+
+    &__input {
+        position: absolute;
+        top: wv-1600(-25px);
+
+        @include tablet() {
+            top: wv-1200(-25px);
+        }
+
+        @include tablet() {
+            top: wv-1600(-25px);
+        }
+
+        @include tablet-l() {
+            top: wv-768(-25px);
+        }
+
+        @include tablet-p() {
+            top: wv-768(-25px);
+        }
+
+        @include mobile() {
+            top: wv-375(-25px);
+        }
+    }
+}

@@ -1,0 +1,62 @@
+@import 'styles/vars';
+
+.likeBtn {  
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;  
+  height: wv-1600(48px);
+  width:  wv-1600(48px);
+  border: 1.5px solid $almost-white;  
+  margin-left: wv-1600(30px);
+
+  @include tablet() {
+    margin-left: wv-1200(30px);
+    width:  wv-1200(40px);
+    height: wv-1200(40px);
+  }
+
+  @include tablet-l() {
+    margin-left: wv-768(30px);
+    width:  wv-768(36px);
+    height: wv-768(36px);
+  } 
+
+  &:hover {   
+    background: $almost-white;
+    svg path{
+      fill: $black;
+    }    
+  }
+
+  &__black{
+    background: transparent;
+    border: 1.5px solid $black;  
+    svg path{
+      fill: $black;
+    }    
+    &:hover {
+      color: $beige;
+      border: 1.5px solid $beige;
+      background: transparent;
+      svg path {
+        fill: $beige;
+      }        
+    }
+  }
+}
+
+.likeIcon {
+  height: wv-1600(20px);
+  width:  wv-1600(20px);
+
+  @include tablet() {
+    width:  wv-1200(17px);
+    height: wv-1200(17px);
+  }
+
+  @include tablet-l() {
+    width:  wv-768(15px);
+    height: wv-768(15px);
+  } 
+}

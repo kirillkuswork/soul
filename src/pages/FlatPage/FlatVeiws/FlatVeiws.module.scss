@@ -1,0 +1,49 @@
+@import "../../../../styles/vars";
+
+.flatVeiws {
+  position: absolute;
+  top: 50%;
+  right: wv-1600(90px);
+  display: flex;
+  flex-direction: column;
+  gap: wv-1600(109px);
+  
+  &__veiw {
+    width: wv-1600(45px);
+    height: wv-1600(45px);
+    cursor: pointer;
+    &:hover {
+      fill: $beige;
+    }
+    &:hover path {
+      stroke: $white;
+    }
+    &:hover circle {
+      stroke: $white;
+    }
+  }
+
+  &__demonstration {
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    display: none;
+    z-index: -1;
+    top: wv-1600(-69px);
+    left: wv-1600(19px);
+    width: wv-1600(160px);
+    height: wv-1600(90px);
+  }
+
+  &__demonstration:hover &__image {
+    display: block;
+  }
+
+  &__vision {
+    position: absolute;
+    top: wv-1600(122px);
+    left: wv-1600(118px);
+  }
+}

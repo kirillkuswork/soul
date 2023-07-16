@@ -1,0 +1,39 @@
+@import "../../../../styles/vars";
+
+.listLeft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: wv-1600(29px);
+
+  @include tablet-p() {
+    margin-bottom: wv-768(25px);
+  }
+  
+  @include mobile() {
+    margin-bottom: wv-375(20px);
+  }
+
+  &__names {
+    display: flex;
+    align-items: center;
+    gap: wv-1600(10px);
+  }
+
+  &__name {
+    @include large-p;
+    color: $black;
+  }
+
+  &__amount {
+    @include p2;
+  }
+  &__icon {
+    @include tablet-p() {
+      display: none;
+    }
+    @include mobile() {
+      display: none;
+    }
+  }
+}

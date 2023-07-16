@@ -1,0 +1,103 @@
+@import 'styles/vars';
+
+.standard {
+    &_title {
+        @include h3;
+        margin-bottom: wv-1600(60px);
+
+        @include laptop() {
+            margin-bottom: wv-1200(60px);
+        }
+
+        @include tablet-l() {
+            @include h2;
+            margin-bottom: wv-768(45px);
+        }
+
+        @include tablet-p() {
+            @include h2;
+            margin-bottom: wv-768(45px);
+        }
+
+        @include mobile() {
+            @include h2;
+            margin-bottom: wv-375(30px);
+        }
+    }
+
+    &_blockList {
+        display: grid;
+        grid-template-columns: repeat(2, wv-1600(570px));
+        column-gap: wv-1600(300px);
+        row-gap: wv-1600(40px);
+
+        @include laptop() {
+            grid-template-columns: repeat(2, wv-1200(570px));
+            column-gap: wv-1200(300px);
+            row-gap: wv-1200(40px);
+        }
+
+        @include tablet() {
+            grid-template-columns: repeat(2, wv-1600(570px));
+            column-gap: wv-1600(300px);
+            row-gap: wv-1600(40px);
+        }
+
+        @include tablet-l() {
+            display: flex;
+            flex-direction: column;
+            gap: wv-768(45px);
+        }
+
+        @include tablet-p() {
+            display: flex;
+            flex-direction: column;
+            gap: wv-768(45px);
+        }
+
+        @include mobile() {
+            display: flex;
+            flex-direction: column;
+            gap: wv-375(30px);
+        }
+    }
+}
+
+.block {
+    &_title {
+        @include p1-bold;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: wv-1600(15px);
+        margin-top: wv-1600(20px);
+
+        @include laptop() {
+            gap: wv-1200(15px);
+            margin-top: wv-1200(20px);
+        }
+
+        @include tablet-l() {
+            gap: wv-768(5px);
+            margin-top: wv-768(15px);
+        }
+
+        @include tablet-p() {
+            gap: wv-768(5px);
+            margin-top: wv-768(15px);
+        }
+
+        @include mobile() {
+            gap: wv-375(5px);
+            margin-top: wv-375(15px);
+        }
+    }
+
+    li {
+        @include p2;
+
+        @include beige-rectangle-hyphens;
+    }
+}

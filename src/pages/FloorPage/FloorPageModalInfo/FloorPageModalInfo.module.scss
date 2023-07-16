@@ -1,0 +1,69 @@
+@import '../../../../styles/vars';
+
+.pin {
+    &__modal {
+        visibility: hidden;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: wv-1600(-280px);
+        width: wv-1600(252px);
+        background-color: $light-beige;
+        padding: wv-1600(12px);
+
+        &__title {
+            @include p2-bold;
+            color: $black;
+            margin-bottom: wv-1600(16px);
+        }
+
+        &__area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: wv-1600(12px);
+            margin-bottom: wv-1600(16px);
+            border-bottom: wv-1600(1px) solid rgba(0, 0, 0, 0.1);
+        }
+
+        &__areaName {
+            font-family: 'TT Travels';
+            font-style: normal;
+            font-weight: 400;
+            font-size: wv-1600(12px);
+            line-height: 130%;
+            color: $black;
+        }
+
+        &__areaAmount {
+            font-family: 'TT Travels';
+            font-style: normal;
+            font-weight: 600;
+            font-size: wv-1600(14px);
+            line-height: 130%;
+            color: $black;
+        }
+
+        &__advantagesTitle {
+            font-family: 'TT Travels';
+            font-style: normal;
+            font-weight: 400;
+            font-size: wv-1600(12px);
+            line-height: 130%;
+            color: $grey;
+            margin-bottom: wv-1600(12px);
+        }
+
+        &__advantagesItems {
+            display: flex;
+            flex-wrap: wrap;
+            gap: wv-1600(8px);
+            margin-bottom: wv-1600(16px);
+        }
+
+        &__price {
+            @include p2-bold;
+            color: $black;
+        }
+    }
+}

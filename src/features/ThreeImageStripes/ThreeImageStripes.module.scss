@@ -1,0 +1,105 @@
+@import 'styles/vars';
+
+.images {
+    display: flex;
+    gap: wv-1600(20px);
+
+    @include laptop() {
+        gap: wv-1200(20px);
+    }
+
+    @include tablet() {
+        gap: wv-1600(20px);
+    }
+
+    @include tablet-l() {
+        gap: wv-768(12px);
+    }
+
+    @include tablet-p() {
+        gap: wv-768(12px);
+    }
+
+    @include mobile() {
+        gap: wv-375(10px);
+    }
+}
+
+.img {
+    position: relative;
+
+    &--0 {
+        width: wv-1600(543px);
+        height: wv-1600(460px);
+
+        @include laptop() {
+            width: wv-1200(408px);
+            height: wv-1200(345px);
+        }
+
+        @include tablet() {
+            width: wv-1600(543px);
+            height: wv-1600(460px);
+        }
+
+        @include tablet-l() {
+            width: wv-768(455px);
+            height: wv-768(385px);
+        }
+
+        @include tablet-p() {
+            width: wv-768(455px);
+            height: wv-768(385px);
+        }
+
+        @include mobile() {
+            width: wv-375(227px);
+            height: wv-375(200px);
+        }
+    }
+
+    &--1 {
+        width: wv-1600(261px);
+        height: wv-1600(380px);
+
+        @include laptop() {
+            width: wv-1200(195px);
+            height: wv-1200(285px);
+        }
+
+        @include tablet() {
+            width: wv-1600(261px);
+            height: wv-1600(380px);
+        }
+
+        @include tablet-l() {
+            width: wv-768(221px);
+            height: wv-768(320px);
+        }
+
+        @include tablet-p() {
+            width: wv-768(221px);
+            height: wv-768(320px);
+        }
+
+        @include mobile() {
+            width: wv-375(108px);
+            height: wv-375(167px);
+        }
+    }
+
+    &--2 {
+        width: wv-1600(636px);
+        height: wv-1600(460px);
+
+        @include laptop() {
+            width: wv-1200(477px);
+            height: wv-1200(345px);
+        }
+
+        @include tablet() {
+            width: wv-1600(636px);
+            height: wv-1600(460px);
+        }
+    }
+}

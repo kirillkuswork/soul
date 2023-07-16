@@ -1,0 +1,71 @@
+@import '../../../styles/vars';
+
+.rangeSlider {
+    width: wv-1600(372px);
+    margin-bottom: wv-1600(35px);
+
+    @include tablet-p() {
+        width: wv-768(319px);
+        margin-bottom: wv-768(35px);
+    }
+
+    @include mobile() {
+        width: wv-375(345px);
+    }
+
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: wv-1600(18px);
+
+        @include tablet-p() {
+            margin-bottom: wv-768(19px);
+        }
+
+        @include mobile() {
+            margin-bottom: wv-375(15px);
+        }
+    }
+
+    &__name {
+        @include sign;
+        color: $black;
+    }
+
+    &__amounts {
+        display: flex;
+        align-items: center;
+        gap: wv-1600(4px);
+        padding-bottom: wv-1600(5px);
+        border-bottom: 1px solid rgba(36, 41, 46, 0.1);
+
+        @include mobile() {
+            gap: wv-375(4px);
+        }
+        
+        span {
+            @include p3-bold;
+            color: $black;
+        }
+    }
+    &__def {
+        width: wv-1600(12px);
+        height: wv-1200(1px);
+        background: black;
+
+        @include mobile() {
+            width: wv-375(11px);
+            height: wv-375(1.5px);
+        }
+    }
+    &__container {
+        width: 100%;
+        padding: 0 wv-1600(4px);
+    }
+}

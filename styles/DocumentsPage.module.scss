@@ -1,0 +1,126 @@
+@import 'styles/vars';
+
+.containerOuter {
+    overflow: clip;
+}
+
+.container {
+    padding: wv-1600(160px) 0 wv-1600(20px) wv-1600(153px);
+
+    @include laptop() {
+        padding: wv-1200(120px) 0 wv-1200(20px) wv-1200(115px);
+    }
+
+    @include tablet-l() {
+        padding: wv-768(135px) wv-768(40px) wv-768(45px) wv-768(40px);
+    }
+
+    @include tablet-p() {
+        padding: wv-768(135px) wv-768(40px) wv-768(45px) wv-768(40px);
+    }
+
+    @include mobile() {
+        padding: wv-375(85px) wv-375(15px) wv-375(40px) wv-375(15px);
+    }
+}
+
+.info {
+    font-weight: 400;
+    font-size: wv-1600(16px);
+    line-height: 140%;
+    color: $black;
+    margin: wv-1600(35px) 0 wv-1600(80px);
+    a {
+        display: inline-block;
+        position: relative;
+        color: $black;
+        margin-left: 5px;
+        @include mobile() {
+            margin-left: 0;
+        }
+        &:after {
+            height: 1px;
+            width: 100%;
+            background-color: $black;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 15%;
+        }
+    }
+
+    @include laptop() {
+        font-size: wv-1200(16px);
+        margin: wv-1200(26px) 0 wv-1200(60px);
+    }
+
+    @include tablet-l() {
+        font-size: wv-768(17px);
+        margin: wv-768(25px) 0 wv-768(60px);
+    }
+
+    @include tablet-p() {
+        font-size: wv-768(17px);
+        margin: wv-768(25px) 0 wv-768(60px);
+    }
+
+    @include mobile() {
+        font-size: wv-375(16px);
+        margin: wv-375(20px) 0 wv-375(40px);
+    }
+}
+.title {
+    @include h2;
+}
+
+.subtitle {
+    @include large-p;
+    margin-bottom: wv-1600(60px);
+
+    @include laptop() {
+        margin-bottom: wv-1200(45px);
+    }
+
+    @include tablet-l() {
+        margin-bottom: wv-768(45px);
+    }
+
+    @include tablet-p() {
+        margin-bottom: wv-768(45px);
+    }
+
+    @include mobile() {
+        margin-bottom: wv-375(30px);
+    }
+}
+
+.documents {
+    @include flex(row, space-between, null);
+    flex-wrap: wrap;
+    max-width: wv-1600(1140px);
+    gap: wv-1600(40px);
+    margin-bottom: wv-1600(80px);
+
+    @include laptop() {
+        margin-bottom: wv-1200(60px);
+    }
+
+    @include tablet-l() {
+        margin-bottom: wv-768(60px);
+        gap: wv-768(25px);
+    }
+
+    @include tablet-p() {
+        margin-bottom: wv-768(60px);
+        max-width: wv-768(688px);
+        gap: wv-768(25px);
+    }
+
+    @include mobile() {
+        font-size: wv-375(16px);
+        width: 100%;
+        margin-bottom: wv-375(40px);
+        @include flex(column, null, null);
+        gap: wv-375(20px);
+    }
+}

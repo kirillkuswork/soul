@@ -1,0 +1,189 @@
+@import 'styles/vars';
+
+.container {
+    position: relative;
+}
+
+.slider {
+    overflow: visible !important;
+    margin: 0 20px !important;
+
+    @include tablet-p() {
+        margin: 0 12px !important;
+    }
+
+    @include mobile() {
+        margin: 0 12px !important;
+    }
+}
+
+.slide {
+    width: wv-1600(449px) !important;
+    height: wv-1600(449px) !important;
+    margin-right: 20px !important;
+
+    &:last-of-type {
+        margin-right: 0 !important;
+    }
+
+    @include laptop() {
+        width: wv-1200(449px) !important;
+        height: wv-1200(449px) !important;
+    }
+    @include tablet() {
+        width: wv-1600(449px) !important;
+        height: wv-1600(449px) !important;
+    }
+
+    @include tablet-l() {
+        width: wv-768(426px) !important;
+        height: wv-768(426px) !important;
+    }
+
+    @include tablet-p() {
+        width: wv-768(426px) !important;
+        height: wv-768(426px) !important;
+    }
+
+    @include mobile() {
+        width: wv-375(286px) !important;
+        height: wv-375(286px) !important;
+    }
+
+    .picture,
+    .content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 5;
+    }
+}
+
+.title {
+    @include h2;
+    color: $white;
+
+    @include tablet-l() {
+        max-width: 100%;
+        font-size: wv-768(45px);
+    }
+
+    @include tablet-p() {
+        max-width: 100%;
+        font-size: wv-768(45px);
+        line-height: 110%;
+    }
+    @include mobile() {
+        max-width: 100%;
+        font-size: wv-375(30px);
+        line-height: 110%;
+    }
+}
+
+.text {
+    @include p1-bold;
+    color: $white;
+    max-width: wv-1600(360px);
+    @include tablet-l() {
+        max-width: 100%;
+        font-size: wv-768(20px);
+    }
+
+    @include tablet-p() {
+        max-width: 100%;
+        font-size: wv-768(20px);
+    }
+
+    @include mobile() {
+        max-width: 100%;
+    }
+}
+
+.content {
+    z-index: 15 !important;
+    padding: wv-1600(30px);
+
+    @include laptop() {
+        padding: wv-1200(30px);
+    }
+
+    @include tablet() {
+        padding: wv-1600(30px);
+    }
+
+    @include tablet-l() {
+        padding: wv-768(25px);
+    }
+
+    @include tablet-p() {
+        padding: wv-768(25px);
+    }
+
+    @include mobile() {
+        padding: wv-375(15px);
+    }
+}
+
+.swiperbuttons {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 40px;
+    padding-right: 60px;
+    button {
+        height: 56px;
+        cursor: pointer;
+    }
+
+    button:first-of-type {
+        margin-right: 20px;
+    }
+
+    @include tablet-p() {
+        padding-top: 30px;
+        padding-right: 40px;
+    }
+
+    @include mobile() {
+        padding-top: 20px;
+        padding-right: 15px;
+    }
+
+    button:hover {
+        line {
+            stroke: $beige;
+        }
+        path {
+            fill: $beige;
+        }
+
+        @include tablet-l() {
+            line {
+                stroke: $black;
+            }
+            path {
+                fill: $black;
+            }
+        }
+
+        @include tablet-p() {
+            line {
+                stroke: $black;
+            }
+            path {
+                fill: $black;
+            }
+        }
+
+        @include mobile() {
+            line {
+                stroke: $black;
+            }
+            path {
+                fill: $black;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import 'styles/vars';
+
+.flatInfo {
+    display: flex;
+    gap: wv-1600(114px);
+    padding-top: wv-1600(140px);
+
+    @include laptop() {
+        padding-top: wv-1200(125px);
+    }
+    @include tablet-p() {
+        padding-top: wv-768(100px);
+    }
+}

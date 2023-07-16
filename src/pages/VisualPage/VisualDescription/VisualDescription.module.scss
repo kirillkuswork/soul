@@ -1,0 +1,35 @@
+@import 'styles/vars';
+
+.visualdescription {
+    display: flex;
+    flex-direction: column;
+    gap: wv-1600(320px);
+
+    &__title {
+        @include h1;
+        color: $black;
+        width: wv-1600(400px);
+        margin-bottom: wv-1600(40px);
+    }
+
+    &__box {
+    }
+
+    &__desc {
+        @include p1;
+        color: $grey;
+        margin-bottom: wv-1600(12px);
+    }
+    &__amount {
+        @include h3;
+        color: $black;
+    }
+    &__compas {
+        position: relative;
+        width: wv-1600(90px);
+        height: wv-1600(90px);
+    }
+
+}
+
+

@@ -1,0 +1,37 @@
+@import 'styles/vars';
+
+.visualModalTabble {
+    display: flex;
+    gap: wv-1600(12px);
+    padding: wv-1600(12px) 0;
+    border-bottom: wv-1600(1px) solid rgba(0, 0, 0, 0.1);
+    &:last-child {
+        border-bottom: none;
+    }
+    &__room {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: wv-1600(35px);
+        height: wv-1600(35px);
+    }
+
+    &__name {
+        font-family: 'TT Travels';
+        font-style: normal;
+        font-weight: 400;
+        font-size: wv-1600(12px);
+        color: $black;
+        line-height: 130%;
+        margin-bottom: wv-1600(4px);
+    }
+
+    &__amount {
+        font-family: 'TT Travels';
+        font-style: normal;
+        font-weight: 600;
+        font-size: wv-1600(14px);
+        line-height: 120%;
+        color: #24292e;
+    }
+}

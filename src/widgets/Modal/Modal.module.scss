@@ -1,0 +1,120 @@
+@import 'styles/vars';
+
+.modal {
+  width: wv-1600(509px);
+  height: wv-1600(175px);    
+  background: #24292e;
+  color: #ffffff;
+  position: fixed;
+  z-index: 59;
+  right:0;
+  bottom:0;
+
+  @include tablet-l() {
+    height: wv-768(167px);
+    width: wv-768(466px);
+  }
+
+  @include tablet-p() {
+    height: wv-768(167px);
+    width: wv-768(466px);
+  }
+
+  @include mobile() {
+    width: 100%;
+    height: wv-375(135px);
+  }
+
+  &__inner {
+    padding: wv-1600(45px) wv-1600(60px) wv-1600(40px) wv-1600(30px);
+
+    @include tablet-l() {
+      padding: wv-768(45px) wv-768(60px) wv-768(40px) wv-768(30px);
+    }
+
+    @include tablet-p() {
+      padding: wv-768(45px) wv-768(60px) wv-768(40px) wv-768(30px);
+    }
+
+    @include mobile() {
+      padding: wv-375(35px) wv-375(15px);
+    }
+  
+    h3 {
+      // color: #D46045;
+      //color: #FFFFFF;
+      font-weight: 600;
+      line-height: 136%;
+      font-size: wv-1600(28px);
+      margin-bottom: wv-1600(10px);
+
+      @include tablet-l() {
+        font-size: wv-768(22px);
+        margin-bottom: wv-768(10px);
+      }
+
+      @include tablet-p() {
+        font-size: wv-768(22px);
+        margin-bottom: wv-768(10px);
+      }
+
+      @include mobile() {
+        font-size: wv-375(18px);
+        margin-bottom: wv-375(10px);
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: wv-1600(16px);
+      line-height: 140%;
+
+      @include tablet-l() {
+        font-size: wv-768(15px);
+      }
+
+      @include tablet-p() {
+        font-size: wv-768(15px);
+      }
+
+      @include mobile() {
+        font-size: wv-375(14px);
+      }
+    }
+  }
+
+  &__btn {
+    border: none;
+    background: transparent;
+    padding: 0;    
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: wv-1600(15px);
+    right: wv-1600(15px);
+    cursor: pointer;
+
+    @include tablet-l() {
+      top: wv-768(15px);
+      right: wv-768(15px);
+    }
+
+    @include tablet-p() {
+      top: wv-768(15px);
+      right: wv-768(15px);
+    }
+
+    @include mobile() {
+      top: wv-375(15px);
+      right: wv-375(15px);
+    }
+  }
+}
+
+.red {
+  color: #D46045;
+}
+
+.white {
+  color: #FFFFFF;
+}

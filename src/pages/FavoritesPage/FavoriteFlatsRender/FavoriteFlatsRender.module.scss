@@ -1,0 +1,71 @@
+@import '../../../../styles/vars';
+
+.favoriteFlatsRender {
+    padding-top: wv-1600(10px);
+    display: flex;
+    flex-direction: column;
+    gap: wv-1600(10px);
+    margin-bottom: wv-1600(30px);
+    max-height: wv-1600(500px);
+    min-height: wv-1600(300px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: wv-1600(1029px);
+
+    @include tablet-p() {
+        width: wv-768(720px);
+        margin-bottom: wv-768(25px);
+        max-height: wv-768(690px);
+        min-height: wv-1600(390px);
+    }
+
+    @include mobile() {
+        width: 100%;
+        gap: wv-375(8px);
+        height: max-content;
+        max-height: initial;
+        margin-bottom: wv-375(40px);
+    }
+
+    &__container {
+        width: wv-1600(1010px);
+        gap: wv-1600(10px);
+        display: flex;
+        flex-direction: column;
+        @include tablet-p() {
+            display: flex;
+            flex-direction: column;
+            gap: wv-768(8px);
+            width: wv-768(688px);
+        }
+
+        @include mobile() {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: wv-375(8px);
+        }
+    }
+
+    &::-webkit-scrollbar {
+        width: wv-1600(4px);
+        height: wv-1600(200px);
+        cursor: pointer;
+
+        @include tablet-p() {
+            width: wv-768(4px);
+            height: wv-768(100px);
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        background: white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #939598; /* цвет бегунка */
+        border-radius: 0; /* округлось бегунка */
+        border: wv-1600(4px) solid #939598;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,143 @@
+@import "../../../../styles/vars";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $light-beige;
+  padding: wv-1600(80px) wv-1600(93px) wv-1600(100px) wv-1600(93px);
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  gap: wv-1600(40px);
+  margin-bottom: wv-1600(60px);
+  text-align: center;
+
+  @include laptop() {
+    gap: wv-1200(40px);
+    margin-bottom: wv-1200(60px);
+  }
+
+  @include tablet() {
+    gap: wv-1600(40px);
+    margin-bottom: wv-1600(60px);
+  }
+
+  @include tablet-l() {
+    gap: wv-768(25px);
+    margin-bottom: wv-768(45px);
+  }
+
+  @include tablet-p() {
+    gap: wv-768(25px);
+    margin-bottom: wv-768(45px);
+  }
+
+  @include mobile() {
+    gap: wv-375(20px);
+    margin-bottom: wv-375(30px);
+  }
+}
+
+.title {
+  @include h2;
+}
+
+.subtitle {
+  @include p1;
+}
+
+.desc {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: wv-1600(40px);
+  white-space: pre-wrap;
+  max-width: wv-1600(1120px);
+
+  @include laptop() {
+    margin-top: wv-1200(40px);
+    max-width: wv-1200(840px);
+  }
+
+  @include tablet-l() {
+    flex-direction: column;
+    gap: wv-768(15px);
+    margin-top: wv-768(25px);
+    max-width: wv-768(588px);
+  }
+
+  @include tablet-p() {
+    flex-direction: column;
+    gap: wv-768(15px);
+    margin-top: wv-768(25px);
+    max-width: wv-768(588px);
+  }
+
+  @include mobile() {
+    flex-direction: column;
+    gap: wv-375(10px);
+    margin-top: wv-375(20px);
+    max-width: wv-375(305px);
+  }
+}
+
+.text {
+  @include p2;
+  max-width: wv-1600(448px);
+
+  @include laptop() {
+    max-width: wv-1200(350px);
+  }
+
+  @include tablet-l() {
+    max-width: 100%;
+  }
+
+  @include tablet-p() {
+    max-width: 100%;
+  }
+
+  @include mobile() {
+    max-width: 100%;
+  }
+}
+
+.img {
+  position: relative;
+  width: wv-1600(1120px);
+  height: wv-1600(810px);
+
+  @include laptop() {
+    width: wv-1200(840px);
+    height: wv-1200(585px);
+  }
+
+  @include tablet() {
+    width: wv-1600(1120px);
+    height: wv-1600(810px);
+  }
+
+  @include tablet-l() {
+    width: wv-768(588px);
+    height: wv-768(520px);
+  }
+
+  @include tablet-p() {
+    width: wv-768(588px);
+    height: wv-768(520px);
+  }
+
+  @include mobile() {
+    width: wv-375(305px);
+    height: wv-375(355px);
+  }
+
+  &_bg {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+  }
+}

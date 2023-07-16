@@ -1,0 +1,200 @@
+@import '../../../../styles/vars';
+
+.listRight {
+   display: flex;
+   flex-direction: column;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 35;
+   width: 100%;
+   height: 100%;
+   background: $almost-white;
+   overflow: scroll;
+
+   @include tablet-p() {
+      padding: wv-768(135px) wv-768(40px) wv-768(40px) wv-768(40px);
+   }
+
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+   }
+
+   &__left {
+      display: flex;
+      flex-direction: column;
+      gap: wv-768(35px);
+      width: wv-768(319px);
+   }
+
+   &__right {
+      display: flex;
+      flex-direction: column;
+      gap: wv-768(45px);
+      width: wv-768(319px);
+   }
+
+   &__title {
+      @include large-p;
+      color: $black;
+      margin-bottom: wv-768(32px);
+   }
+
+   &__close {
+      position: absolute;
+      right: wv-375(15px);
+      top: wv-375(15px);
+   }
+
+   &__filters {
+      width: 100%;
+      @include mobile() {
+         display: flex;
+         flex-direction: column;
+         gap: wv-375(35px);
+      }
+   }
+
+   &__modal {
+      position: relative;
+   }
+
+   &__accordion {
+      display: flex;
+      flex-direction: column;
+      gap: wv-1600(35px);
+      margin-bottom: wv-1600(35px);
+
+      @include tablet-p() {
+         width: wv-768(319px);
+      }
+
+      &__item {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding-bottom: wv-1600(12px);
+         border-bottom: 1px solid $black;
+
+         @include tablet-p() {
+            padding-bottom: wv-768(12px);
+         }
+
+         @include mobile() {
+            padding-bottom: wv-375(12px);
+         }
+      }
+      &__name {
+         @include p2-bold;
+         color: $black;
+      }
+   }
+
+   &__advantages {
+      margin-top: wv-1600(42px);
+      margin-bottom: wv-1600(40px);
+
+      @include tablet-p() {
+         margin-bottom: wv-768(45px);
+      }
+
+      @include mobile() {
+         margin-top: wv-375(30px);
+         margin-bottom: wv-375(40px);
+      }
+
+      &__name {
+         @include p2-bold;
+         color: $black;
+         margin-bottom: wv-1600(25px);
+
+         @include tablet-p() {
+            margin-bottom: wv-768(25px);
+         }
+      }
+   }
+   &__advantage {
+      &__item {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding-bottom: wv-1600(12px);
+         @include tablet-p() {
+            width: wv-768(319px);
+            padding-bottom: wv-768(25px);
+         }
+
+         @include mobile() {
+            padding-bottom: wv-375(20px);
+         }
+      }
+      &__name {
+         @include p2-bold;
+         color: $black;
+      }
+   }
+
+   &__purchaseBtn {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: wv-1600(15px) wv-1600(0px);
+      border: wv-1600(1.5px) solid $beige;
+      background-color: transparent;
+      @include p3-bold;
+      color: $beige;
+      transition: all 0.5s ease;
+      cursor: pointer;
+
+      &:hover {
+         border: wv-1600(1.5px) solid $black;
+         color: $black;
+      }
+   }
+
+   &__buttons {
+      display: flex;
+      flex-grow: 1;
+      align-items: flex-end;
+      gap: wv-768(12px);
+   }
+
+   &__submit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: wv-768(688px);
+      height: wv-768(40px);
+      background: $black;
+
+      @include p3-bold;
+      color: $white;
+      cursor: pointer;
+
+      &:hover {
+         color: $white;
+         background: $beige;
+      }
+   }
+
+   &__clean {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: wv-768(688px);
+      height: wv-768(40px);
+      background: transparent;
+      border: wv-768(1.5px) solid $black;
+
+      @include p3-bold;
+      color: $black;
+      cursor: pointer;
+
+      &:hover {
+         color: $beige;
+         border: wv-768(1.5px) solid $beige;
+      }
+   }
+}

@@ -1,0 +1,34 @@
+@import '../../../../styles/vars';
+
+.advantages {
+    display: flex;
+    align-items: center;
+    gap: wv-1600(8px);
+    flex-wrap: wrap;
+
+    @include tablet-p() {
+        gap: wv-768(8px);
+        flex-wrap: wrap;
+    }
+    @include mobile() {
+        gap: wv-375(8px);
+        flex-wrap: wrap;
+    }
+
+    &__btn {
+        width: max-content;
+        padding: wv-1600(8px);
+        background-color: $medium-grey;
+        @include sign;
+        font-size: wv-1600(12px);
+        font-weight: 600;
+        color: $black;
+
+        @include tablet-p() {
+            padding: wv-768(8px);
+        }
+        @include mobile() {
+            padding: wv-375(8px);
+        }
+    }
+}

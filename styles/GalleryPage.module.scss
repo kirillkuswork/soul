@@ -1,0 +1,57 @@
+@import 'styles/vars';
+
+.wrapper {
+    overflow-x: hidden;
+}
+
+.container {
+    padding: wv-1600(160px) 0 wv-1600(140px) 0;
+
+    @include laptop() {
+        padding: wv-1200(160px) 0 wv-1200(140px) 0;
+    }
+
+    @include tablet-l() {
+        padding: wv-768(135px) 0 wv-768(100px) 0;
+    }
+
+    @include tablet-p() {
+        padding: wv-768(135px) 0 wv-768(100px) 0;
+    }
+
+    @include mobile() {
+        padding: wv-375(85px) 0 wv-375(80px) 0;
+    }
+}
+
+.title {
+    padding: 0 wv-1600(60px);
+    margin-bottom: wv-1600(60px);
+    @include h1;
+    color: $black;
+
+    @include laptop() {
+        padding: 0 wv-1200(60px);
+        margin-bottom: wv-1200(60px);
+    }
+
+    @include tablet() {
+        padding: 0 wv-1600(60px);
+        margin-bottom: wv-1600(60px);
+    }
+
+    @include tablet-l() {
+        padding: 0 wv-768(40px);
+        margin-bottom: wv-768(60px);
+    }
+
+    @include tablet-p() {
+        padding: 0 wv-768(40px);
+        margin-bottom: wv-768(60px);
+    }
+
+    @include mobile() {
+        padding: 0 wv-375(15px);
+        margin-bottom: wv-375(40px);
+    }
+}

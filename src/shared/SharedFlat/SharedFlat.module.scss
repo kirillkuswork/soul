@@ -1,0 +1,120 @@
+@import '../../../styles/vars';
+
+.shared {
+    position: absolute;
+    right: wv-1600(-10px);
+    bottom: wv-1600(30px);
+    display: flex;
+    flex-direction: column;
+    gap: wv-1600(15px);
+
+    padding: wv-1600(20px);
+    background-color: $light-beige;
+
+    @include tablet-p() {
+        gap: wv-768(10px);
+        padding: wv-768(15px);
+        z-index: 20;
+        width: max-content;
+        height: max-content;
+        top: wv-768(25px);
+    }
+
+    @include mobile() {
+        gap: wv-375(10px);
+        padding: wv-375(10px);
+    }
+
+    &__top {
+        position: absolute;
+        right: wv-1600(-10px);
+        bottom: wv-1600(30px);
+        display: flex;
+        flex-direction: column;
+        gap: wv-1600(15px);
+
+        padding: wv-1600(20px);
+        background-color: $light-beige;
+
+        @include tablet-p() {
+            z-index: 20;
+            gap: wv-768(10px);
+            padding: wv-768(15px);
+            width: max-content;
+            height: max-content;
+            bottom: wv-768(30px);
+        }
+
+        @include mobile() {
+            gap: wv-375(10px);
+            padding: wv-375(10px);
+            bottom: wv-375(30px);
+        }
+    }
+
+    @include mobile() {
+        z-index: 20;
+        width: max-content;
+        height: max-content;
+        top: wv-375(25px);
+    }
+    &__link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: wv-1600(10px);
+        cursor: pointer;
+    }
+    &__link:hover &__name {
+        color: $beige;
+    }
+    &__link:hover &__icon {
+        border: 1px solid $beige;
+    }
+
+    &__link:hover &__icon > svg > path {
+        fill: $beige;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: wv-1600(40px);
+        height: wv-1600(40px);
+        border: 1px solid $grey;
+        @include tablet-p() {
+            width: wv-768(30px);
+            height: wv-768(30px);
+        }
+        @include mobile() {
+            width: wv-375(30px);
+            height: wv-375(30px);
+        }
+    }
+
+    &__name {
+        @include p2;
+    }
+
+    &__notification {
+        width: max-content;
+        position: absolute;
+        right: 10%;
+        bottom: wv-1600(30px);
+        background-color: $black;
+        padding: wv-1600(10px);
+        @include p2;
+        color: $white;
+
+        @include tablet-p() {
+            bottom: wv-768(30px);
+            padding: wv-768(8px);
+        }
+
+        @include mobile() {
+            bottom: wv-375(30px);
+            padding: wv-375(8px);
+        }
+    }
+}

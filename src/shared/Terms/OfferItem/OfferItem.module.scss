@@ -1,0 +1,271 @@
+@import 'styles/vars';
+
+.container {
+    padding-top: wv-1600(27.5px);
+    padding-bottom: wv-1600(27.5px);
+    border-bottom: 1px solid rgba(20, 29, 39, 0.1);
+    @include flex(row, space-between, center);
+
+    &:first-of-type {
+        border-top: 1px solid rgba(20, 29, 39, 0.1);
+    }
+
+    tr {
+        &:nth-child(2) {
+            width: 20%;
+            display: flex;
+            @include mobile() {
+                justify-content: center;
+            }
+            @include tablet-p() {
+                width: 17%;
+            }
+        }
+
+        &:nth-child(3) {
+            width: 23%;
+            display: flex;
+            @include tablet-p() {
+                width: 20%;
+            }
+        }
+
+        &:nth-child(4) {
+            width: 16%;
+            @include tablet-p() {
+                width: 20%;
+            }
+        }
+
+        width: 42%;
+        @include mobile() {
+            width: 50%;
+        }
+    }
+}
+
+.title {
+    @include flex(row, null, center);
+    width: 41%;
+}
+
+.image {
+    position: relative;
+    width: wv-1600(60px);
+    height: wv-1600(60px);
+    margin-right: wv-1600(20px);
+
+    @include tablet() {
+        width: wv-1200(60px);
+        height: wv-1200(60px);
+        margin-right: wv-1200(10px);
+    }
+
+    @include tablet-l() {
+        width: wv-768(54px);
+        height: wv-768(54px);
+        margin-right: wv-768(10px);
+    }
+
+    @include tablet-p() {
+        width: wv-768(54px);
+        height: wv-768(54px);
+        margin-right: wv-768(10px);
+    }
+
+    @include mobile() {
+        width: wv-375(54px);
+        height: wv-375(54px);
+        margin-right: wv-375(20px);
+    }
+}
+
+.name {
+    span {
+        @include sign;
+    }
+
+    p {
+        @include p2;
+        margin-top: wv-1600(5px);
+        padding-right: wv-1600(10px);
+
+        @include tablet() {
+            margin-top: wv-1200(5px);
+            padding-right: wv-1200(10px);
+        }
+
+        @include tablet-l() {
+            margin-top: wv-768(5px);
+            padding-right: wv-768(10px);
+        }
+
+        @include tablet-p() {
+            margin-top: wv-768(5px);
+            padding-right: wv-768(10px);
+            font-size: wv-768(14px);
+        }
+
+        @include mobile() {
+            margin-top: wv-375(5px);
+            padding-right: wv-375(10px);
+            font-size: wv-375(14px);
+        }
+    }
+}
+
+.btn {
+    position: relative;
+    width: wv-375(82px);
+    height: wv-375(64px);
+    @include flex(row, center, center);
+
+    &::before {
+        content: '';
+        transform: rotate(90deg);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: wv-1600(14px);
+        height: wv-1600(2px);
+        background-color: $beige;
+        transition: all 0.5s;
+
+        @include tablet() {
+            width: wv-1200(14px);
+            height: wv-1200(2px);
+        }
+
+        @include tablet-l() {
+            width: wv-768(14px);
+            height: wv-768(2px);
+        }
+
+        @include tablet-p() {
+            width: wv-768(14px);
+            height: wv-768(2px);
+        }
+
+        @include mobile() {
+            width: wv-375(14px);
+            height: wv-375(2px);
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: wv-1600(14px);
+        height: wv-1600(2px);
+        background-color: $beige;
+
+        @include tablet() {
+            width: wv-1200(14px);
+            height: wv-1200(2px);
+        }
+
+        @include tablet-l() {
+            width: wv-768(14px);
+            height: wv-768(2px);
+        }
+
+        @include tablet-p() {
+            width: wv-768(14px);
+            height: wv-768(2px);
+        }
+
+        @include mobile() {
+            width: wv-375(14px);
+            height: wv-375(2px);
+        }
+    }
+
+    &__opened {
+        &::before {
+            content: '';
+            transform: rotate(180deg);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: wv-1600(14px);
+            height: wv-1600(2px);
+            background-color: $beige;
+            transition: all 0.5s;
+
+            @include tablet() {
+                width: wv-1200(14px);
+                height: wv-1200(2px);
+            }
+
+            @include tablet-l() {
+                width: wv-768(14px);
+                height: wv-768(2px);
+            }
+
+            @include tablet-p() {
+                width: wv-768(14px);
+                height: wv-768(2px);
+            }
+
+            @include mobile() {
+                width: wv-375(14px);
+                height: wv-375(2px);
+            }
+        }
+    }
+}
+
+.term {
+    @include p2;
+
+    &__wide::before {
+        content: 'Срок кредита';
+        display: block;
+    }
+}
+
+.payment {
+    @include p1-bold;
+    text-align: end;
+
+    width: 20%;
+    @include flex(row, flex-end, null);
+
+    @include tablet-p() {
+        font-size: wv-768(14px);
+    }
+
+    @include mobile() {
+        font-size: wv-375(14px);
+    }
+}
+
+.rate {
+    width: 10%;
+    font-size: wv-375(14px);
+    line-height: 140%;
+    color: $black;
+
+    &__wide::before {
+        content: 'Ставка';
+        display: block;
+        letter-spacing: 0.3px;
+    }
+}
+
+.rate__wide,
+.term__wide,
+.payment__wide {
+    width: auto !important;
+    padding: wv-375(12px);
+
+    &:first-of-type,
+    &:nth-child(2) {
+        padding-left: 0;
+    }
+    &:last-of-type {
+        @include flex(column, null, center);
+    }
+}

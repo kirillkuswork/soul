@@ -1,0 +1,13 @@
+@import '../../../../styles/vars';
+
+.favoriteLeft {
+   width: wv-1600(1010px);
+
+   @include tablet-p() {
+      width: 100%;
+   }
+
+   @include mobile() {
+      width: 100%;
+   }
+}

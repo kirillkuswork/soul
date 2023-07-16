@@ -1,0 +1,11 @@
+@import 'styles/vars';
+
+.container {
+    position: relative;
+}
+
+.child {
+    &:not(:first-child) {
+        margin-bottom: wv-1600(10px);
+    }
+}

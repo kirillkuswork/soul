@@ -1,0 +1,43 @@
+@import "../../../../styles/vars";
+
+.listRightAdaptive {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: wv-768(32px);
+
+  @include mobile() {
+    margin-bottom: wv-375(32px);
+  }
+
+  &__title {
+    @include large-p;
+    color: $black;
+  }
+
+  &__clear {
+    position: relative;
+    @include sign;
+    padding-right: wv-768(21px);
+    cursor: pointer;
+
+    @include mobile() {
+      padding-right: wv-375(21px);
+    }
+
+    &:after {
+      position: absolute;
+      content: url(../../../assets/images/unknown/icons/close.svg);
+      width: wv-768(15px);
+      height: wv-768(15px);
+      right: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include mobile() {
+        width: wv-375(15px);
+        height: wv-375(15px);
+      }
+    }
+  }
+}

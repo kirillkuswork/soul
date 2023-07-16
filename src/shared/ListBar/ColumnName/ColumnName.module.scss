@@ -1,0 +1,78 @@
+@import '../../../../styles/vars';
+
+.columnName {
+   @include sign;
+   color: $black;
+   cursor: pointer;
+
+   @include mobile() {
+      font-size: wv-375(11px);
+   }
+
+   &__content {
+      position: relative;
+      display: flex;
+      width: max-content;
+
+      &:hover {
+         opacity: 1;
+         color: $beige;
+      }
+   }
+
+   &__arrows {
+      display: flex;
+      flex-direction: column;
+      gap: wv-1600(8px);
+      position: absolute;
+      right: wv-1600(-24px);
+      top: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+
+      &:hover > path {
+         stroke: $beige;
+      }
+
+      @include tablet-p() {
+         right: wv-768(-16px);
+      }
+   }
+
+   &__arrow {
+      cursor: pointer;
+      width: wv-1600(10px);
+      height: wv-1600(7px);
+      &:hover > path {
+         stroke: $beige;
+      }
+
+      @include tablet-p() {
+         width: wv-768(8.4px);
+         height: wv-768(4.9px);
+      }
+
+      @include mobile() {
+        display: none;
+      }
+   }
+   &__arrowRev {
+      transform: rotate(180deg);
+      width: wv-1600(10px);
+      height: wv-1600(7px);
+      cursor: pointer;
+
+      &:hover > path {
+         stroke: $beige;
+      }
+
+      @include tablet-p() {
+         width: wv-768(8.4px);
+         height: wv-768(4.9px);
+      }
+      
+      @include mobile() {
+        display: none;
+      }
+   }
+}

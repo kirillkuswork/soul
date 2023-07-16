@@ -1,0 +1,50 @@
+@import '../../../../styles/vars';
+
+.favoriteRight {
+    width: wv-1600(375px);
+    padding: wv-1600(16px);
+    margin-top: wv-1600(73px);
+    height: max-content;
+    background-color: $medium-grey;
+
+    @include tablet-p() {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: wv-768(12px) wv-768(20px);
+    }
+
+    @include mobile() {
+        display: flex;
+        flex-direction: column;
+        padding: wv-375(12px) wv-375(20px);
+        width: 100%;
+    }
+
+    &__name {
+        @include p1-bold;
+        color: $black;
+        margin-bottom: wv-1600(16px);
+
+        @include tablet-p() {
+            margin-bottom: wv-768(8px);
+        }
+
+        @include mobile() {
+          margin-bottom: wv-375(4px);
+        }
+    }
+
+    &__description {
+        @include p2;
+        margin-bottom: wv-1600(16px);
+
+        @include tablet-p() {
+            margin-bottom: wv-768(0px);
+        }
+
+        @include mobile() {
+          margin-bottom: wv-375(12px);
+        }
+    }
+}

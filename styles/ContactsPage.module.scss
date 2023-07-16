@@ -1,0 +1,147 @@
+@import 'styles/vars';
+
+.containerOuter {
+    overflow: hidden;
+}
+
+.container {
+    background-color: $white;
+    width: 100vw;
+    @include flex(row, space-between, null);
+
+    @include tablet-l() {
+        display: block;
+    }
+
+    @include tablet-p() {
+        display: block;
+    }
+
+    @include mobile() {
+        display: block;
+    }
+}
+
+.left {
+    max-width: wv-1600(660px);
+    @include tablet-p() {
+        max-width: 100%;
+    }
+
+    @include mobile() {
+        max-width: 100%;
+    }
+}
+
+.right {
+    width: wv-1600(975px);
+    height: 100vh;
+    @include tablet-l() {
+        width: 100vw;
+        height: wv-768(760px);
+    }
+
+    @include tablet-p() {
+        width: 100vw;
+        height: wv-768(760px);
+    }
+
+    @include mobile() {
+        width: 100vw;
+        height: wv-375(540px);
+    }
+}
+
+.title {
+    @include p2;
+    color: $grey;
+    margin-left: wv-1600(60px);
+    margin-bottom: wv-1600(40px);
+
+    @include laptop() {
+        margin-left: wv-1200(60px);
+        margin-bottom: wv-1200(40px);
+    }
+
+    @include tablet-l() {
+        margin-left: wv-768(40px);
+        margin-bottom: wv-768(25px);
+    }
+
+    @include tablet-p() {
+        margin-left: wv-768(40px);
+        margin-bottom: wv-768(25px);
+    }
+
+    @include mobile() {
+        margin-left: wv-375(15px);
+        margin-bottom: wv-375(20px);
+    }
+}
+
+.slider {
+    margin: wv-1600(140px) 0;
+
+    @include laptop() {
+        margin: wv-1200(100px) 0;
+    }
+
+    @include tablet-l() {
+        margin: wv-768(100px) 0;
+    }
+
+    @include tablet-p() {
+        margin: wv-768(100px) 0;
+    }
+
+    @include mobile() {
+        margin: wv-375(80px) 0;
+    }
+}
+
+.title {
+    @include p2;
+    color: $grey;
+    margin-left: wv-1600(60px);
+    margin-bottom: wv-1600(40px);
+
+    @include laptop() {
+        margin-left: wv-1200(60px);
+        margin-bottom: wv-1200(40px);
+    }
+
+    @include tablet-l() {
+        margin-left: wv-768(40px);
+        margin-bottom: wv-768(25px);
+    }
+
+    @include tablet-p() {
+        margin-left: wv-768(40px);
+        margin-bottom: wv-768(25px);
+    }
+
+    @include mobile() {
+        margin-left: wv-375(15px);
+        margin-bottom: wv-375(20px);
+    }
+}
+
+.slider {
+    margin: wv-1600(140px) 0;
+
+    @include laptop() {
+        margin: wv-1200(100px) 0;
+    }
+
+    @include tablet-l() {
+        margin: wv-768(100px) 0;
+    }
+
+    @include tablet-p() {
+        margin: wv-768(100px) 0;
+    }
+
+    @include mobile() {
+        margin: wv-375(80px) 0;
+    }
+}

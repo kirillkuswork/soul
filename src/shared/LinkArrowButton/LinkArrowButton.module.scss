@@ -1,0 +1,41 @@
+@import 'styles/vars';
+
+.btn {
+  @include p2-bold;
+  @include flex(row, null, center);
+  gap: wv-1600(10px);
+
+  @include laptop() {
+    gap: wv-1200(10px);
+  }
+
+  @include tablet() {
+    gap: wv-1600(10px);
+  }
+
+  @include tablet-l() {
+    gap: wv-768(10px);
+  }
+
+  @include tablet-p() {
+    gap: wv-768(10px);
+  }
+
+  @include mobile() {
+    gap: wv-375(10px);
+  }
+
+  @media not all and (max-width: 1024px) and (hover: none) {
+    &:hover {
+      p {
+        color: $beige;
+      }
+      path:last-of-type {
+        stroke: $beige;
+      }
+      path {
+        fill: $beige;
+      }
+    }
+  }
+}

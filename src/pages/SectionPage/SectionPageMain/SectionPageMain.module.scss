@@ -1,0 +1,10 @@
+@import '../../../../styles/vars';
+
+.sectionPageMain {
+    display: flex;
+    gap: wv-1600(210px);
+    padding-top: wv-1600(132px);
+    // margin-bottom: wv-1600(80px);
+    position: relative;
+    overflow: hidden;
+}

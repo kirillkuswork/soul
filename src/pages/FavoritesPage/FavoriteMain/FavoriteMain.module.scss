@@ -1,0 +1,21 @@
+@import '../../../../styles/vars';
+
+.favoriteMain {
+   display: flex;
+   position: relative;
+   justify-content: space-between;
+   padding-top: wv-1600(140px);
+   margin-bottom: wv-1600(80px);
+
+   @include tablet-p() {
+      flex-direction: column;
+      padding-top: wv-768(135px);
+      margin-bottom: wv-768(105px);
+   }
+
+   @include mobile() {
+      flex-direction: column;
+      padding-top: wv-375(85px);
+      margin-bottom: wv-375(80px);
+   }
+}

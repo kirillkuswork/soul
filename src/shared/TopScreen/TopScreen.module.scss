@@ -1,0 +1,34 @@
+@import 'styles/vars';
+
+.top {
+    position: relative;
+    height: 100vh;
+
+    &_pic {
+        @include picture;
+    }
+
+    &_img {
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    &_title {
+        @include h1;
+        color: $white;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        @include tablet-p() {
+            width: wv-768(688px);
+        }
+
+        @include mobile() {
+            max-width: wv-375(343px);
+        }
+    }
+}

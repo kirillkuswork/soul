@@ -1,0 +1,125 @@
+@import 'styles/vars';
+
+.buttonIcon {
+    display: flex;
+    align-items: center;
+    gap: wv-1600(10px);
+    cursor: pointer;
+
+    &:hover &__text {
+        color: $beige;
+    }
+
+    &:hover div > svg > path {
+        stroke: $beige;
+        fill: $beige;
+    }
+    &:hover div > svg > line {
+        stroke: $beige;
+    }
+
+    @include tablet-p() {
+        &:hover &__text {
+            color: $black;
+        }
+        &:hover &__text {
+            color: $black;
+        }
+
+        &:hover div > svg > path {
+            stroke: $black;
+            fill: $black;
+        }
+        &:hover div > svg > line {
+            stroke: $black;
+        }
+    }
+
+    @include mobile() {
+        gap: wv-375(10px);
+
+        &:hover &__text {
+            color: $black;
+        }
+        &:hover &__text {
+            color: $black;
+        }
+
+        &:hover div > svg > path {
+            stroke: $black;
+            fill: $black;
+        }
+        &:hover div > svg > line {
+            stroke: $black;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: wv-1600(10px);
+        cursor: pointer;
+
+        &:hover .buttonIcon__text {
+            color: $beige;
+        }
+
+        &:hover div > svg > path {
+            stroke: $beige;
+            fill: $beige;
+        }
+        &:hover div > svg > line {
+            stroke: $beige;
+        }
+
+        @include tablet-p() {
+            &:hover .buttonIcon__text {
+                color: $black;
+            }
+            &:hover &__text {
+                color: $black;
+            }
+
+            &:hover div > svg > path {
+                stroke: $black;
+                fill: $black;
+            }
+            &:hover div > svg > line {
+                stroke: $black;
+            }
+        }
+
+        @include mobile() {
+            gap: wv-375(10px);
+
+            &:hover .buttonIcon__text {
+                color: $black;
+            }
+            &:hover &__text {
+                color: $black;
+            }
+
+            &:hover div > svg > path {
+                stroke: $black;
+                fill: $black;
+            }
+            &:hover div > svg > line {
+                stroke: $black;
+            }
+        }
+    }
+
+    &__icon {
+        display: flex;
+    }
+
+    &__text {
+        @include p2-bold;
+        @include tablet-p() {
+            font-size: wv-768(16px);
+        }
+        @include mobile() {
+            font-size: wv-375(13px);
+        }
+    }
+}

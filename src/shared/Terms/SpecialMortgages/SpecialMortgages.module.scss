@@ -1,0 +1,165 @@
+@import "styles/vars";
+
+.container {
+  background: $white;
+  padding: wv-1600(80px) wv-1600(154px) wv-1600(140px) wv-1600(60px);
+
+  @include tablet() {
+    padding: wv-1200(80px) wv-1200(154px) wv-1200(140px) wv-1200(60px);
+  }
+
+  @include tablet-l() {
+    padding: wv-768(60px) wv-768(40px) wv-768(105px) wv-768(40px);
+  }
+
+  @include tablet-p() {
+    padding: wv-768(60px) wv-768(40px) wv-768(105px) wv-768(40px);
+  }
+
+  @include mobile() {
+    padding: wv-375(40px) wv-375(15px) wv-375(80px) wv-375(15px);
+  }
+}
+
+.title {
+  @include large-p;
+  color: $black;
+  margin-bottom: wv-1600(60px);
+
+  @include tablet() {
+    margin-bottom: wv-1200(60px);
+  }
+
+  @include tablet-l() {
+    margin-bottom: wv-768(45px);
+  }
+
+  @include tablet-p() {
+    margin-bottom: wv-768(45px);
+  }
+
+  @include mobile() {
+    margin-bottom: wv-375(30px);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, wv-1600(543px));
+  column-gap: wv-1600(301px);
+  row-gap: wv-1600(60px);
+
+
+  @include tablet() {
+    grid-template-columns: repeat(2, wv-1200(543px));
+    column-gap: wv-1200(301px);
+    row-gap: wv-1200(60px);
+  }
+
+  @include tablet() {
+    grid-template-columns: repeat(2, wv-1600(543px));
+    column-gap: wv-1600(301px);
+    row-gap: wv-1600(60px);
+  }
+
+  @include tablet-l() {
+    display: flex;
+    flex-direction: column;
+    gap: wv-768(45px);
+  }
+
+  @include tablet-p() {
+    display: flex;
+    flex-direction: column;
+    gap: wv-768(45px);
+  }
+
+  @include mobile() {
+    display: flex;
+    flex-direction: column;
+    gap: wv-375(30px);
+  }
+
+  &_title {
+    @include p1-bold;
+    color: $black;
+    margin-bottom: wv-1600(20px);
+
+    @include tablet() {
+      margin-bottom: wv-1200(20px);
+    }
+
+    @include tablet-l() {
+      margin-bottom: wv-768(15px);
+    }
+
+    @include tablet-p() {
+      margin-bottom: wv-768(15px);
+    }
+
+    @include mobile() {
+      margin-bottom: wv-375(15px);
+    }
+  }
+
+  div > div > p, li {
+    @include p2;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: wv-1600(5px);
+    margin-top: wv-1600(15px);
+
+    @include tablet() {
+      gap: wv-1200(5px);
+      margin-top: wv-1200(15px);
+    }
+
+    @include tablet-l() {
+      gap: wv-768(5px);
+      margin-top: wv-768(15px);
+    }
+
+    @include tablet-p() {
+      gap: wv-768(5px);
+      margin-top: wv-768(15px);
+    }
+
+    @include mobile() {
+      gap: wv-375(5px);
+      margin-top: wv-375(10px);
+    }
+  }
+
+  li {
+    @include beige-rectangle-hyphens;
+  }
+}
+
+.notification {
+  @include sign;
+  margin-top: wv-1600(60px);
+  max-width: wv-1600(636px);
+
+  @include tablet() {
+    margin-top: wv-1200(60px);
+    max-width: wv-1200(636px);
+  }
+
+  @include tablet-l() {
+    margin-top: wv-768(45px);
+    max-width: 100%;
+  }
+
+  @include tablet-p() {
+    margin-top: wv-768(45px);
+    max-width: 100%;
+  }
+
+  @include mobile() {
+    margin-top: wv-375(30px);
+    max-width: 100%;
+  }
+}

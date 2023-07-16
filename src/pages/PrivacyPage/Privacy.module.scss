@@ -1,0 +1,275 @@
+@import 'styles/vars';
+
+.privacyContainerHeader {
+    width: 100%;
+    position: fixed;
+    z-index: 35;
+    top: 0;
+    left: 0;
+    background-color: #ffff;
+    overflow-x: hidden;
+}
+
+.privacyContainer {
+    background-color: white;
+}
+
+.privacyContainerContainer {
+    width: 100%;
+    height: 100%;
+    padding: wv-1600(16px) wv-1600(60px);
+    @include mobile() {
+        padding: wv-375(10px) wv-375(20px);
+    }
+    @include tablet-l() {
+        padding: wv-768(10px) wv-768(20px);
+    }
+    @include tablet-p() {
+        padding: wv-768(10px) wv-768(20px);
+    }
+}
+
+.privacyContainerLogo {
+    width: wv-1600(21px);
+    cursor: pointer;
+    @include mobile() {
+        width: wv-375(21px);
+    }
+    @include tablet-l() {
+        width: wv-768(21px);
+    }
+    @include tablet-p() {
+        width: wv-768(21px);
+    }
+}
+.privacyContainer {
+    height: fit-content;
+    position: relative;
+    padding-top: wv-1600(80px);
+    padding-left: wv-1600(154px);
+    @include mobile() {
+        padding-top: wv-375(85px);
+        padding-left: 3%;
+    }
+    @include tablet-l() {
+        padding-top: wv-768(85px);
+        padding-left: 5%;
+    }
+    @include tablet-p() {
+        padding-top: wv-768(85px);
+        padding-left: 5%;
+    }
+}
+
+.privacyTitle {
+    width: 65%;
+    margin-top: wv-1600(80px);
+    @include mobile() {
+        margin-top: wv-375(46px);
+        width: 90%;
+    }
+    @include tablet-l() {
+        margin-top: wv-768(76px);
+        width: 90%;
+    }
+    @include tablet-p() {
+        margin-top: wv-768(76px);
+        width: 65%;
+    }
+}
+
+.privacyTitle p {
+    font-family: $font-travels;
+    font-style: normal;
+    font-weight: 600;
+    font-size: wv-1600(48px);
+    line-height: 120%;
+    color: #24292e;
+    margin: 0;
+    @include mobile() {
+        font-size: wv-375(22px);
+    }
+    @include tablet-l() {
+        font-size: wv-768(32px);
+    }
+    @include tablet-p() {
+        font-size: wv-768(32px);
+    }
+}
+
+.privacySubBlock {
+    @include flex(row, space-between, null);
+    position: relative;
+    margin-top: wv-1600(80px);
+    margin-bottom: wv-1600(60px);
+
+    @include mobile() {
+        @include flex(column, null, null);
+        margin-top: wv-375(30px);
+        margin-bottom: wv-375(40px);
+    }
+    @include tablet-l() {
+        margin-top: wv-768(45px);
+        margin-bottom: wv-768(60px);
+    }
+    @include tablet-p() {
+        margin-top: wv-768(45px);
+        margin-bottom: wv-768(60px);
+    }
+}
+
+.privacySubText {
+    width: 65%;
+    font-family: $font-travels;
+    font-style: normal;
+    font-weight: 400;
+    font-size: wv-1600(20px);
+    line-height: 140%;
+    color: #171717;
+
+    @include mobile() {
+        width: 100%;
+        font-size: wv-375(14px);
+    }
+    @include tablet-l() {
+        width: 95%;
+        font-size: wv-768(17px);
+    }
+    @include tablet-p() {
+        width: 95%;
+        font-size: wv-768(17px);
+    }
+}
+
+.privacyTextContainer {
+    @include flex(column, null, null);
+    width: 100%;
+
+    a {
+        color: $black;
+        text-decoration: underline;
+
+        &:hover {
+            color: $beige;
+            @include mobile() {
+                color: $black;
+            }
+            @include tablet-p() {
+                color: $black;
+            }
+            @include tablet-l() {
+                color: $black;
+            }
+            @include tablet() {
+                color: $black;
+            }
+        }
+    }
+}
+
+.privacyTextContainerItem {
+    @include flex(column, null, null);
+    position: relative;
+    width: 90%;
+    margin-bottom: wv-1600(40px);
+    @include mobile() {
+        width: 96%;
+        @include flex(column, null, null);
+        margin-bottom: wv-375(40px);
+    }
+    @include tablet-l() {
+        width: 95%;
+        font-size: wv-768(40px);
+    }
+    @include tablet-p() {
+        width: 95%;
+        font-size: wv-768(40px);
+    }
+}
+.privacyTextTitle {
+    width: 65%;
+    font-family: $font-travels;
+    font-style: normal;
+    font-weight: 600;
+    font-size: wv-1600(20px);
+    line-height: 140%;
+    color: #171717;
+    margin-bottom: wv-1600(20px);
+
+    @include mobile() {
+        width: 100%;
+        font-size: wv-375(16px);
+        margin-bottom: wv-375(15px);
+    }
+    @include tablet-l() {
+        width: 100%;
+        font-size: wv-768(17px);
+        margin-bottom: wv-768(20px);
+    }
+    @include tablet-p() {
+        width: 100%;
+        font-size: wv-768(17px);
+        margin-bottom: wv-768(20px);
+    }
+}
+
+.privacyTextContent {
+    width: 60%;
+
+    @include mobile() {
+        width: 100%;
+    }
+    @include tablet-p() {
+        width: 100%;
+    }
+}
+
+.privacyTextContent p {
+    font-family: $font-travels;
+    font-weight: 400;
+    font-size: wv-1600(16px);
+    line-height: 140%;
+    color: #171717;
+    margin-bottom: wv-1600(0px);
+    @include flex(row, null, null);
+    @include mobile() {
+        font-size: wv-1600(14px);
+    }
+    @include tablet-p() {
+        font-size: wv-768(15px);
+    }
+    @include tablet-l() {
+        font-size: wv-768(15px);
+    }
+}
+
+.privacyTextContent p span {
+    font-family: $font-travels;
+    font-weight: 400;
+    font-size: wv-1600(16px);
+    line-height: 140%;
+    color: #171717;
+    margin-bottom: wv-1600(18px);
+    @include mobile() {
+        font-size: wv-375(14px);
+    }
+    @include tablet-p() {
+        font-size: wv-768(15px);
+    }
+    @include tablet-l() {
+        font-size: wv-768(15px);
+    }
+}
+
+.privacyTextContent p :first-child {
+    margin-right: wv-1600(19px);
+    @include mobile() {
+        margin-right: wv-375(16px);
+    }
+    @include tablet-p() {
+        font-size: wv-768(15px);
+    }
+    @include tablet-l() {
+        font-size: wv-768(15px);
+    }
+}

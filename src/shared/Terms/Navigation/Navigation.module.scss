@@ -1,0 +1,91 @@
+@import "../../../../styles/vars";
+
+.container {
+  display: flex;  
+  margin-top: wv-1600(93px);
+  position: relative;
+  z-index:0;
+
+  &:after {    
+    position: absolute;   
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: rgba(36, 41, 46, .1);  
+    left: 0;
+    bottom: 0;
+  }
+
+  @include tablet() {
+    margin-top: wv-1200(93px);    
+  }
+
+  @include tablet-l() {
+    margin-top: wv-768(60px);   
+  }
+
+  @include tablet-p() {
+    margin-top: wv-768(60px); 
+  }
+
+  @include mobile() {
+    margin-top: wv-375(38px);    
+  }
+
+  :global {
+
+    .swiper {      
+      margin: 0 wv-1600(60px);
+
+      @include tablet() {
+        margin: 0 wv-1200(60px);
+      }
+
+      @include tablet-l() {
+        margin: 0 wv-768(40px);
+      }
+
+      @include tablet-p() {
+        margin: 0 wv-768(40px);
+      }
+
+      @include mobile() {      
+        margin: 0 wv-375(15px);                   
+      }
+    }
+  }
+}
+
+.button {
+  @include p2-bold;
+  padding-bottom: wv-1600(17px);
+  cursor: pointer;
+  display: inline-block;
+  position:relative;
+
+  @include tablet() {
+    padding-bottom: wv-1200(17px);
+  }
+
+  @include tablet-l() {
+    padding-bottom: wv-768(12px);
+  }
+
+  @include tablet-p() {
+    padding-bottom: wv-768(12px);
+  }
+
+  @include mobile() {
+    padding-bottom: wv-375(12px);
+  }
+
+  &__active {
+    border-bottom: 2px solid $beige;
+  }
+}
+
+.hover {
+  .button:hover {
+    color: $beige;
+  }
+}

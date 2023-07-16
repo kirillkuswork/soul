@@ -1,0 +1,92 @@
+@import 'styles/vars';
+
+.linksContainer {
+    @include flex(column, null, null);
+    margin-top: wv-768(30px);
+    gap: wv-768(25px);
+
+    @include tablet() {
+        gap: wv-1200(25px);
+    }
+
+    @include tablet-l() {
+        gap: wv-768(25px);
+        margin-top: wv-768(30px);
+    }
+
+    @include tablet-p() {
+        gap: wv-768(25px);
+        margin-top: wv-768(30px);
+    }
+
+    @include mobile() {
+        gap: wv-375(15px);
+        margin-top: wv-375(20px);
+    }
+}
+
+.link {
+    font-size: wv-768(20px);
+    line-height: 140%;
+    font-weight: 400;
+    color: $black;
+    opacity: 0.8;
+    cursor: pointer;
+
+    @include tablet() {
+        font-size: wv-1200(20px);
+    }
+
+    @include tablet-l() {
+        font-size: wv-768(20px);
+    }
+
+    @include tablet-p() {
+        font-size: wv-768(20px);
+    }
+
+    @include mobile() {
+        font-size: wv-375(16px);
+    }
+
+    &:hover {
+        opacity: 1;
+        color: #000;
+    }
+}
+
+.menuEl {
+    @include flex(row, space-between, center);
+    -webkit-tap-highlight-color: transparent;
+
+    &__open {
+        div > div:last-of-type {
+            display: none;
+        }
+    }
+
+    &__plusEl {
+        div:last-of-type {
+            transform: translateY(-100%) rotate(90deg);
+        }
+
+        div {
+            position: relative;
+            background: $black;
+            opacity: 1;
+            height: wv-768(2px);
+            width: wv-768(25px);
+            transition: all 0.3s;
+
+            @include mobile() {
+                height: wv-375(2px);
+                width: wv-375(25px);
+            }
+
+            @include tablet() {
+                height: wv-1200(3px);
+                width: wv-1200(40px);
+            }
+        }
+    }
+}

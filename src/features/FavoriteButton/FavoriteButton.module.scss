@@ -1,0 +1,38 @@
+@import 'styles/vars';
+
+.heart {
+    cursor: pointer;
+
+    @include tablet-p() {
+        display: flex;
+    }
+
+    @include mobile() {
+        display: flex;
+        gap: wv-375(5px);
+    }
+
+    & > svg {
+        width: wv-1600(16px);
+        height: wv-1600(15px);
+        transition: all 0.5s ease;
+
+        @include laptop() {
+            width: wv-1200(16px);
+            height: wv-1200(15px);
+        }
+        @include tablet-p() {
+            width: wv-768(16px);
+            height: wv-768(15px);
+        }
+        @include mobile() {
+            width: wv-375(16px);
+            height: wv-375(15px);
+        }
+    }
+
+    &:hover svg {
+        transition: all 0.5s ease;
+        transform: scale(1.2);
+    }
+}

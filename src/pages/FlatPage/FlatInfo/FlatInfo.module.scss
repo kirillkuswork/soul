@@ -1,0 +1,19 @@
+@import '../../../../styles/vars';
+
+.flatInfo {
+    &__container {
+        position: relative;
+    }
+
+    &__label {
+        position: absolute;
+
+        @include tablet-p() {
+            display: none;
+        }
+
+        @include mobile() {
+            display: none;
+        }
+    }
+}

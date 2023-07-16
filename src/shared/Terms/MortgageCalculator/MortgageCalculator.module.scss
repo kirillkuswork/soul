@@ -1,0 +1,289 @@
+@import "styles/vars";
+
+.container {
+    background: $white;
+    padding: wv-1600(160px) wv-1600(60px) wv-1600(366px) wv-1600(60px);
+
+  @include tablet() {
+    padding: wv-1200(160px) wv-1200(60px) wv-1200(366px) wv-1200(60px);
+  }
+
+  @include tablet-l() {
+    padding: wv-768(160px) wv-768(40px) wv-768(300px) wv-768(40px);
+  }
+
+  @include tablet-p() {
+    padding: wv-768(80px) wv-768(40px) wv-768(300px) wv-768(40px);
+    margin-bottom: wv-768(100px);
+  }
+
+  @include mobile() {
+    padding: wv-375(60px) wv-375(15px) wv-375(366px) wv-375(15px);
+    margin-bottom: wv-375(120px);
+  }
+}
+
+.notification {
+  @include sign;
+  margin-top: wv-1600(40px);
+
+  @include tablet() {
+    margin-top: wv-1200(40px);
+  }
+
+  @include tablet-l() {
+    margin-top: wv-768(20px);
+  }
+
+  @include tablet-p() {
+    margin-top: wv-768(20px);
+  }
+
+  @include mobile() {
+    margin-top: wv-375(20px);
+  }
+}
+
+.title {
+  @include h2;
+  margin-bottom: wv-1600(80px);
+
+  @include tablet() {
+    margin-bottom: wv-1200(80px);
+  }
+
+  @include tablet-l() {
+    margin-bottom: wv-768(60px);
+  }
+
+  @include tablet-p() {
+    margin-bottom: wv-768(60px);
+  }
+
+  @include mobile() {
+    margin-bottom: wv-375(30px);
+  }
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+
+  @include mobile() {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.filters {
+  max-width: wv-1600(440px);
+
+  @include tablet() {
+    max-width: wv-1200(440px);
+  }
+
+  @include tablet-l() {
+    max-width: wv-768(215px);
+  }
+
+  @include tablet-p() {
+    max-width: wv-768(215px);
+  }
+
+  @include mobile() {
+    max-width: 100%;  
+  }
+
+  &_btns {
+    display: flex;
+    align-items: center;
+    padding-top: wv-1600(10px);
+
+    @include tablet() {
+      padding-top: wv-1200(10px);
+    }
+
+    @include tablet-l() {
+      padding-top: wv-768(10px);
+    }
+
+    @include tablet-p() {
+      padding-top: wv-768(10px);
+    }
+
+    @include mobile() {
+      padding-top: wv-375(10px);
+      margin-bottom: wv-375(15px);
+    }
+
+    &_title {
+      @include sign;
+      color: $black;
+    }
+  }
+}
+
+.familyMortgage {
+  margin-top: wv-1600(50px);
+
+  p {
+    cursor: pointer;
+    max-width: wv-1600(407px);
+    padding-left: wv-1600(33px);
+    @include sign;
+    color: $grey;
+
+    @include tablet-p() {
+      padding-left: 0;
+      margin: 0;
+     }
+
+    @include mobile() {
+     min-width: 100%;
+     padding-left: 0;
+    }
+  }
+
+  span {
+    color: $black;
+    text-decoration: underline;
+  }
+}
+
+.offers {
+  width: 100%;
+  max-width: wv-1600(868px);
+
+  @include tablet() {
+    max-width: wv-1200(700px);
+  }
+
+  @include tablet-l() {
+    max-width: wv-768(428px);
+  }
+
+  @include tablet-p() {
+    max-width: wv-768(428px);
+  }
+
+  @include mobile() {
+    max-width: 100%;
+    margin-top: wv-375(47px);
+  }
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: wv-1600(60px);
+
+  @include tablet() {
+    margin-top: wv-1200(60px);
+  }
+
+  @include tablet-l() {
+    margin-top: wv-768(20px);
+  }
+
+  @include tablet-p() {
+    margin-top: wv-768(20px);
+  }
+
+  @include mobile() {
+    margin-top: wv-375(40px);
+  }
+
+  &_titles {
+      tr {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      th {
+        width: auto;
+      }
+  }
+
+  &_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &_title {
+    @include sign;
+    text-align: left;
+    padding-bottom: wv-1600(15px);
+
+    @include tablet() {
+      padding-bottom: wv-1200(15px);
+    }
+
+    @include tablet-l() {
+      padding-bottom: wv-768(15px);
+    }
+
+    @include tablet-p() {
+      padding-bottom: wv-768(15px);
+    }
+
+    @include mobile() {
+      padding-bottom: wv-375(15px);
+    }
+
+    &__1 {
+      width: 42%;
+
+      @include tablet-l() {
+        width: 42%;
+      }
+
+      @include tablet-p() {
+        width: 42%;
+      }
+
+      @include mobile() {
+        width: 50%;
+      }
+    }
+
+    &__2 {
+      width: 20%;
+
+      @include tablet-p() {
+        width: 17%;
+      }
+    }
+
+    &__3 {
+      width: 23%;
+
+      @include tablet-l() {
+        width: 23%;
+      }
+
+      @include tablet-p() {
+        width: 20%;
+      }
+    }
+
+    &__4 {
+      text-align: end;
+      width: 16%;
+
+      @include tablet-l() {
+        width: 23%;
+      }
+
+      @include tablet-p() {
+        text-align: end;
+        width: 20%;
+      }
+    }
+  }
+}
+
+.hiddenTitles {
+  width: wv-375(50px);
+}

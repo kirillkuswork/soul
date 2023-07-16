@@ -1,0 +1,52 @@
+@import "styles/vars";
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: wv-1600(40px);
+
+  @include tablet() {
+    gap: wv-1200(55px);
+  }
+
+  @include tablet-l() {
+    gap: wv-768(35px);
+  }
+
+  @include tablet-p() {
+    gap: wv-768(35px);
+  }
+
+  @include mobile() {
+    gap: wv-375(10px);
+  }
+}
+
+.control {
+  cursor: pointer;
+
+  svg {
+    width: wv-1600(60px);
+    height: wv-1600(60px);
+
+    @include tablet() {
+      width: wv-1200(60px);
+      height: wv-1200(60px);
+    }
+
+    @include tablet-l() {
+      width: wv-768(45px);
+      height: wv-768(45px);
+    }
+
+    @include tablet-p() {
+      width: wv-768(45px);
+      height: wv-768(45px);
+    }
+
+    @include mobile() {
+      width: wv-375(54px);
+      height: wv-375(54px);
+    }
+  }
+}

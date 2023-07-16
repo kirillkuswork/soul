@@ -1,0 +1,61 @@
+@import 'styles/vars';
+
+.container {
+    overflow-x: hidden;
+    padding-top: wv-1600(150px);
+
+    @include laptop() {
+        padding-top: wv-1200(150px);
+    }
+
+    @include tablet-l() {
+        padding-top: wv-768(135px);
+    }
+
+    @include tablet-p() {
+        padding-top: wv-768(135px);
+    }
+
+    @include mobile() {
+        padding-top: wv-375(81px);
+    }
+
+    &_beige {
+        background: $light-beige;
+    }
+}
+
+.title {
+    @include h1;
+    margin-left: wv-1600(60px);
+
+    @include laptop() {
+        margin-left: wv-1200(60px);
+    }
+
+    @include tablet-l() {
+        margin-left: wv-768(40px);
+    }
+
+    @include tablet-p() {
+        margin-left: wv-768(40px);
+    }
+
+    @include mobile() {
+        margin-left: wv-375(15px);
+    }
+}
+
+.main {
+    position: relative;
+    overflow: visible;
+    background: $white;
+}
+
+.error {
+    @include h1;
+    position: fixed;
+    color: $beige;
+    left: 10%;
+    top: 30%;
+}

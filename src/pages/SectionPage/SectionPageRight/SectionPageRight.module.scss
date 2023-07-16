@@ -1,0 +1,44 @@
+@import '../../../../styles/vars';
+
+.sectionPageRight {
+    position: relative;
+    max-width: 100%;
+    &__container {
+        width: wv-1600(450px);
+        height: wv-1600(650px);
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__link {
+        position: absolute;
+        right: wv-1600(0px);
+    }
+
+    &__modal {
+        position: absolute;
+        right: wv-1600(-230px);
+        top: wv-1600(150px);
+        padding: wv-1600(12px);
+        width: wv-1600(252px);
+        background: $light-beige;
+        &__title {
+            @include p2-bold;
+            color: $black;
+            margin-bottom: wv-1600(16px);
+        }
+        &__amount {
+            font-family: 'TT Travels';
+            font-style: normal;
+            font-weight: 400;
+            font-size: wv-1600(12px);
+            line-height: 130%;
+            color: $grey;
+            margin-bottom: wv-1600(12px);
+        }
+    }
+}

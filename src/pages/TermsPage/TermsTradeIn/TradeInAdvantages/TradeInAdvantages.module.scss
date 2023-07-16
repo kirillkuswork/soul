@@ -1,0 +1,158 @@
+@import "styles/vars";
+
+.title {
+  @include p2-bold;
+  padding-left: wv-1600(60px);
+  padding-bottom: wv-1600(17px);
+  margin-bottom: wv-1600(80px);
+  border-bottom: $grey-border;
+  position: relative;
+
+  @include laptop() {
+    padding-left: wv-1200(60px);
+    padding-bottom: wv-1200(17px);
+    margin-bottom: wv-1200(80px);
+  }
+
+  @include tablet-l() {
+    padding-left: wv-768(40px);
+    padding-bottom: wv-768(12px);
+    margin-bottom: wv-768(57px);;
+  }
+
+  @include tablet-p() {
+    padding-left: wv-768(40px);
+    padding-bottom: wv-768(12px);
+    margin-bottom: wv-768(57px);
+  }
+
+  @include mobile() {
+    padding-left: wv-375(15px);
+    padding-bottom: wv-375(12px);
+    margin-bottom: wv-375(42px);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: wv-1600(60px);
+    width: wv-1600(442px);
+    border-bottom: 2px solid $beige;
+
+    @include tablet() {
+      left: wv-1200(60px);
+      width: wv-1200(442px);
+    }
+
+    @include tablet-l() {
+      left: wv-768(40px);
+      width: wv-768(442px);
+    }
+
+    @include tablet-p() {
+      left: wv-768(40px);
+      width: wv-768(442px);
+    }
+
+    @include mobile() {
+      left: wv-375(15px);
+      width: wv-375(182px);
+    }
+  }
+}
+
+.cardList {
+  display: flex;
+  padding-inline: wv-1600(60px);
+  gap: wv-1600(25px);
+
+  @include tablet() {
+    padding-inline: wv-1200(60px);
+    gap: wv-1200(25px);
+  }
+
+  @include tablet-l() {
+    padding-inline: wv-768(40px);
+    gap: wv-768(12px);
+  }
+
+  @include tablet-p() {
+    padding-inline: wv-768(40px);
+    gap: wv-768(12px);
+  }
+
+  @include mobile() {
+    flex-direction: column;
+    padding-inline: wv-375(15px);
+    gap: wv-375(8px);
+  }
+
+  &_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: $light-grey;
+    width: wv-1600(476px);
+    height: wv-1600(325px);
+    padding: wv-1600(60px);
+
+    @include tablet() {
+      width: wv-1200(476px);
+      height: wv-1200(325px);
+      padding: wv-1200(60px);
+    }
+
+    @include tablet-l() {
+      width: wv-768(221px);
+      height: wv-768(275px);
+      padding: wv-768(30px);
+    }
+
+    @include tablet-p() {
+      width: wv-768(221px);
+      height: wv-768(275px);
+      padding: wv-768(30px);
+    }
+
+    @include mobile() {
+      width: 100%;
+      height: wv-375(200px);
+      padding: wv-375(30px);
+    }
+
+    &__id {
+      @include h2;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: wv-1600(12px);
+
+      @include tablet() {
+        gap: wv-1200(12px);
+      }
+
+      @include tablet-l() {
+        gap: wv-768(8px);
+      }
+
+      @include tablet-p() {
+        gap: wv-768(8px);
+      }
+
+      @include mobile() {
+        gap: wv-375(8px);
+      }
+    }
+
+    &__title {
+      @include p1-bold;
+    }
+
+    &__text {
+      @include p2;
+    }
+  }
+}

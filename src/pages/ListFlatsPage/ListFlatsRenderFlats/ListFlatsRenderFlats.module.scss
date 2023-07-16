@@ -1,0 +1,26 @@
+@import '../../../../styles/vars';
+
+.listRender {
+    padding-top: wv-1600(10px);
+
+    @include tablet-p() {
+
+        max-height: wv-768(620px);
+        min-height: wv-768(150px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: wv-768(1029px);
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        // padding-top: wv-1600(10px);
+        gap: wv-1600(10px);
+
+        @include tablet-p() {
+            gap: wv-768(8px);
+            width: wv-768(688px);
+        }
+    }
+}

@@ -1,0 +1,78 @@
+@import "styles/vars";
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: wv-1600(12px);
+  padding-bottom: wv-1600(9px);
+
+  input[type=checkbox] {
+    -moz-appearance:initial // Hack for Firefox Browsers
+  }
+  @include mobile() {
+    margin: wv-375(40px) 0  wv-375(10px);
+  }
+}
+
+.input {
+  -webkit-appearance:none;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid $black;
+    left: 0;
+    top: 0;
+    transition: all .2s ease;
+  }
+
+  &::before {
+    transition: all .2s ease;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::after {
+        border: 1px solid $beige;
+        background: $beige;
+      }
+    }
+  }
+
+  &:checked {
+    &::after {
+      content: '';
+      border: 1px solid $beige;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='20' height='20' fill='%23CE9270'/%3E%3Cpath d='M5 8.625L9.23077 13L16 6' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  @media (any-hover: hover) {
+    &.selected:hover {
+      &::after {
+        border: 1px solid $black;
+        background: transparent;
+      }
+
+      &::before {
+        border-bottom: 2px solid $black;
+        border-left: 2px solid $black;
+      }
+    }
+  }
+}
+
+.label {
+  @include sign;
+  color: $black;  
+
+  @include mobile() {
+    margin-left: wv-375(10px);
+  }
+}

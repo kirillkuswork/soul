@@ -1,0 +1,123 @@
+@import 'styles/vars';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: wv-1600(850px);
+    width: 100vw;
+    position: relative;
+
+    @include laptop() {
+        min-height: wv-1200(637px);
+    }
+
+    @include tablet-l() {
+        min-height: wv-768(1024px);
+    }
+
+    @include tablet-p() {
+        min-height: wv-768(1024px);
+    }
+
+    @include mobile() {
+        min-height: wv-375(1200px);
+    }
+}
+
+.blockList {
+    display: flex;
+    gap: wv-1600(20px);
+    margin-top: wv-1600(80px);
+
+    @include laptop() {
+        gap: wv-1200(15px);
+        margin-top: wv-1200(60px);
+    }
+
+    @include tablet-l() {
+        display: grid;
+        gap: wv-768(12px);
+        grid-template-columns: repeat(2, wv-768(338px));
+        margin-top: wv-768(60px);
+    }
+
+    @include tablet-p() {
+        display: grid;
+        gap: wv-768(12px);
+        grid-template-columns: repeat(2, wv-768(338px));
+        margin-top: wv-768(60px);
+    }
+
+    @include mobile() {
+        display: flex;
+        flex-direction: column;
+        gap: wv-375(10px);
+        margin-top: wv-375(40px);
+    }
+}
+
+.title {
+    @include h1;
+    position: relative;
+    z-index: 1;
+    color: $white;
+    text-align: center;
+    transform: translateY(50vh);
+    max-width: wv-1600(1293px);
+
+    @include laptop() {
+        max-width: wv-1200(1293px);
+    }
+
+    @include tablet-l() {
+        max-width: 100%;
+    }
+
+    @include tablet-p() {
+        max-width: 100%;
+    }
+
+    @include mobile() {
+        max-width: 100%;
+    }
+
+    &__moved {
+        transform: translateY(0px) !important;
+    }
+}
+
+.child {
+    z-index: 1;
+    position: relative;
+    opacity: 0;
+
+    @include tablet-l() {
+        padding-inline: wv-768(40px);
+    }
+
+    @include tablet-p() {
+        padding-inline: wv-768(40px);
+    }
+
+    @include mobile() {
+        padding-inline: wv-768(15px);
+    }
+}
+
+.background {
+    @include mobile() {
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: wv-375(667px) !important;
+        position: fixed !important;
+        z-index: -1;
+        opacity: 0;
+    }
+}
+
+.pic {
+    @include picture;
+}

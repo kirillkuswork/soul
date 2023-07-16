@@ -1,0 +1,16 @@
+@import '../../../../styles/vars';
+
+.floorPageRight {
+    &__contents {
+        display: flex;
+        align-items: flex-end;
+        gap: wv-1600(27.65px);
+        margin-top: wv-1600(71px);
+    }
+    &__section {
+        // height: wv-1600(180px);
+        width: 90%;
+    }
+
+
+}

@@ -1,0 +1,40 @@
+@import 'styles/vars';
+
+.listFlatsPage {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding-top: wv-1600(140px);
+    margin-bottom: wv-1600(80px);
+
+    @include laptop() {
+        padding-top: wv-1200(125px);
+    }
+
+    @include tablet-p() {
+        flex-direction: column-reverse;
+        padding-top: wv-768(135px);
+    }
+
+    @include mobile() {
+        flex-direction: column-reverse;
+        padding-top: wv-375(85px);
+    }
+
+    &__sticky {
+        position: sticky;
+        background: #f83d23;
+        width: 100px;
+        height: 100px;
+        top: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 6px #000;
+        color: $white;
+
+        @include tablet-p() {
+            position: static;
+        }
+    }
+}

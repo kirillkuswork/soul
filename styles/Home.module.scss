@@ -1,0 +1,19 @@
+@import 'styles/vars';
+
+.container {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.section {
+    position: relative;
+
+    &_top {
+        min-height: 100vh;
+        background: $blue-black;
+    }
+
+    &_artFactory {
+        background: $white;
+    }
+}

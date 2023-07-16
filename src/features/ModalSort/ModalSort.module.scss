@@ -1,0 +1,76 @@
+@import '../../../styles/vars';
+
+.modalSort {
+    position: absolute;
+    top: wv-1600(47px);
+    z-index: 2;
+    width: wv-1600(372px);
+    padding: wv-1600(30px);
+
+    display: flex;
+    flex-direction: column;
+    gap: wv-1600(24px);
+    background-color: $almost-white;
+
+    @include tablet-p() {
+        width: wv-768(319px);
+        padding: wv-768(24px);
+        gap: wv-768(20px);
+        top: wv-768(45px);
+    }
+
+    @include mobile() {
+        width: wv-375(345px);
+        padding: wv-375(24px);
+        gap: wv-375(20px);
+        top: wv-375(45px);
+    }
+
+    a {
+        display: block;
+    }
+
+    &__item {
+        width: 100%;
+        display: flex;
+        @include p2;
+        color: #141d27;
+        transition: all ease 0.2s;
+        cursor: pointer;
+
+        &:hover {
+            color: $beige;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: default;
+            pointer-events: none;
+        }
+        // @include tablet-p() {
+        //     &:hover {
+        //         color: #141d27;
+        //     }
+        // }
+
+        // @include mobile() {
+
+        //     &:active {
+        //         color: #141d27;
+        //     }
+        // }
+    }
+
+    &__selected {
+        color: $beige;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: url(../../assets/images/unknown/icons/bird.svg);
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

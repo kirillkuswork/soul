@@ -1,0 +1,54 @@
+@import "styles/vars";
+
+.container {
+  text-align: center;
+}
+
+.percent {
+  @include sign;
+  color: $black;
+  margin-top: wv-1600(10px);
+
+  @include tablet() {
+    margin-top: wv-1200(10px);
+  }
+
+  @include tablet-l() {
+    margin-top: wv-768(10px);
+  }
+
+  @include tablet-p() {
+    margin-top: wv-768(10px);
+  }
+
+  @include mobile() {
+    margin-top: wv-375(10px);
+  }
+}
+
+.image {
+  position: relative;
+  width: wv-1600(60px);
+  height: wv-1600(60px);
+  cursor: pointer;
+
+  @include tablet() {
+    width: wv-1200(60px);
+    height: wv-1200(60px);
+  }
+
+  @include tablet-l() {
+    width: wv-768(45px);
+    height: wv-768(45px);
+  }
+
+  @include tablet-p() {
+    width: wv-768(45px);
+    height: wv-768(45px);
+  }
+
+  @include mobile() {
+    width: wv-375(54px);
+    height: wv-375(54px);
+  }
+}

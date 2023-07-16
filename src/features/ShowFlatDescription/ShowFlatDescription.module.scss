@@ -1,0 +1,75 @@
+@import 'styles/vars';
+
+.showFlatDescription {
+    position: fixed;
+    background-color: $white;
+    height: 100vh;
+    width: wv-1600(500px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: wv-1600(140px) wv-1600(40px) wv-1600(26px) wv-1600(40px);
+    right: 0;
+    top: wv-1600(0px);
+    z-index: 16;
+    overflow: hidden;
+
+    @include tablet-p() {
+        width: inherit;
+    }
+
+    &__grey {
+        position: fixed;
+        background-color: $almost-white;
+        height: 100vh;
+        width: wv-1600(500px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: wv-1600(140px) wv-1600(40px) wv-1600(26px) wv-1600(40px);
+        right: 0;
+        top: wv-1600(0px);
+        z-index: 16;
+        overflow: hidden;
+
+        @include tablet-p() {
+            width: inherit;
+            justify-content: flex-start;
+        }
+    }
+
+    &__plans {
+        position: relative;
+        display: flex;
+        width: wv-1600(352.7px);
+        height: wv-1600(410px);
+        margin-bottom: wv-1600(29px);
+
+        @media screen and (max-width: 1920px) and (max-height: 940px) {
+            margin-bottom: wv-1600(0px);
+        }
+
+        @include tablet-p() {
+            margin-top: wv-768(165px);
+            width: wv-768(330px);
+            height: wv-768(308px);
+            margin-bottom: wv-768(40px);
+        }
+    }
+
+    &__compas {
+        position: relative;
+        width: wv-1600(70px);
+        height: wv-1600(70px);
+        margin-bottom: wv-1600(40px);
+
+        @include tablet-p() {
+            width: wv-768(52px);
+            height: wv-768(52px);
+        }
+    }
+
+    &__deadline {
+        @include sign;
+    }
+}

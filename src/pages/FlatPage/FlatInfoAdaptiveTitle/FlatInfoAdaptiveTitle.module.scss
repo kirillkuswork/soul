@@ -1,0 +1,19 @@
+@import '../../../../styles/vars';
+
+.flatInfoAdaptiveTitle {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: wv-768(45px) 0;
+
+   @include mobile() {
+      margin: wv-375(30px) 0;
+   }
+
+   &__buttons {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: wv-768(12px);
+   }
+}

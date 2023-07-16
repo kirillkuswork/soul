@@ -1,0 +1,56 @@
+@import 'styles/vars';
+
+.container {
+    @include flex(row, null, center);
+
+    &__hover {
+        &:hover {
+            .content__name {
+                color: $beige;
+            }
+
+            svg > rect {
+                fill: $beige;
+            }
+        }
+    }
+}
+
+.content {
+    @include sign;
+
+    &__name {
+        @include p1-bold;
+        color: $black;
+    }
+}
+
+.icon {
+    margin-right: wv-1600(16px);
+    height: wv-1600(60px);
+    width: wv-1600(60px);
+
+    @include tablet() {
+        margin-right: wv-1200(16px);
+        height: wv-1200(60px);
+        width: wv-1600(60px);
+    }
+
+    @include tablet-l() {
+        margin-right: wv-768(16px);
+        height: wv-768(60px);
+        width: wv-768(60px);
+    }
+
+    @include tablet-p() {
+        margin-right: wv-768(16px);
+        height: wv-768(60px);
+        width: wv-768(60px);
+    }
+
+    @include mobile() {
+        margin-right: wv-375(16px);
+        height: wv-375(50px);
+        width: wv-375(50px);
+    }
+}

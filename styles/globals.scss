@@ -1,0 +1,358 @@
+@import 'normalize';
+@import 'vars';
+@import 'fonts';
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: $font-travels;
+    font-style: normal;
+}
+
+//Scrollbar
+/* Firefox */
+html {
+    scrollbar-color: $blue-grey $blue-black;
+    scrollbar-width: thin;
+    scroll-behavior: auto;
+}
+
+/* WebKit and Chromium's */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: $blue-black;
+
+    @include laptop() {
+        width: 2px;
+        height: 4px;
+        background-color: transparent;
+    }
+
+    @include tablet-l() {
+        width: 2px;
+        height: 4px;
+        background-color: transparent;
+    }
+
+    @include tablet-p() {
+        width: 2px;
+        height: 4px;
+        background-color: transparent;
+    }
+
+    @include mobile() {
+        width: 2px;
+        height: 4px;
+        background-color: transparent;
+    }
+}
+
+::-webkit-scrollbar-thumb {
+    background: $blue-grey;
+    border-radius: 5px;
+}
+
+body * {
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+//To remove arrow in details
+details > summary {
+    list-style: none;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+.swiper {
+    z-index: 0 !important;
+    height: fit-content !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.swiper-slide {
+    width: fit-content !important;
+}
+
+.__privacy_span {
+    margin-left: wv-1600(40px);
+
+    @include laptop() {
+        margin-left: wv-1600(42px);
+    }
+
+    @include tablet-l() {
+        margin-left: wv-768(32px);
+    }
+
+    @include tablet-p() {
+        margin-left: wv-768(32px);
+    }
+
+    @include mobile() {
+        margin-left: wv-375(0px);
+    }
+}
+
+// Стили добавления показа квартир для выборщика
+
+.flatInfoLeft__printed {
+    fill-opacity: 0.4 !important;
+    stroke: #ce9270 !important;
+    fill: #ce9270 !important;
+}
+
+.flatInfoLeft__printedFloor {
+    stroke: #ce9270 !important;
+    fill: #ce9270 !important;
+    opacity: 0.4;
+}
+
+.floor__visible {
+    stroke: #ce9270 !important;
+    fill: #ce9270 !important;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.floor__disabled {
+    stroke: #bfced3 !important;
+    fill: #bfced3 !important;
+    opacity: 0.4;
+}
+
+.floor__page {
+    opacity: 0;
+    cursor: pointer;
+    &:hover {
+        opacity: 1 !important;
+        fill: #ce9270;
+    }
+}
+
+.floor__reserve {
+    opacity: 0.7;
+}
+
+.active__label {
+    & > div:nth-child(1) {
+        background-color: $beige !important;
+        color: $white;
+    }
+}
+
+.floor__page.active__label {
+    fill: #ce93705e !important;
+    opacity: 1;
+}
+
+.floor__unvisible {
+    opacity: 0;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.modalflat__active {
+    visibility: visible !important;
+}
+
+.__privacy_first_p {
+    margin-left: wv-1600(5px) !important;
+
+    @include laptop() {
+        margin-left: wv-1600(5px) !important;
+    }
+
+    @include tablet-l() {
+        margin-left: wv-768(5px) !important;
+    }
+
+    @include tablet-p() {
+        margin-left: wv-768(5px) !important;
+    }
+
+    @include mobile() {
+        margin-left: wv-375(0px) !important;
+    }
+}
+
+.noUi-target {
+    background: $dark-blue !important;
+    border: none !important;
+
+    &:hover .noUi-connect {
+        background: $beige !important;
+        border: wv-1600(1px) solid $beige !important;
+    }
+
+    &:hover .noUi-handle-lower {
+        background: $beige !important;
+        border: wv-1600(1px) solid $beige !important;
+    }
+
+    &:hover .noUi-handle-upper {
+        background: $beige !important;
+        border: wv-1600(1px) solid $beige !important;
+    }
+}
+
+.noUi-horizontal {
+    height: wv-1600(1px) !important;
+}
+
+.noUi-base {
+    height: wv-1600(2px) !important;
+
+    @include tablet-l() {
+        height: wv-768(2px) !important;
+    }
+
+    @include tablet-p() {
+        height: wv-768(2px) !important;
+    }
+
+    @include mobile() {
+        height: wv-375(2px) !important;
+    }
+}
+
+.noUi-connects {
+    background: $default-grey !important;
+}
+
+.noUi-connect {
+    height: wv-1600(2px) !important;
+    background: $dark-blue !important;
+    overflow: initial;
+
+    @include tablet-p() {
+        height: wv-768(2px) !important;
+    }
+
+    @include mobile() {
+        height: wv-375(2px) !important;
+    }
+}
+
+.noUi-handle-lower {
+    right: wv-1600(-10px) !important;
+    top: wv-1600(-6px) !important;
+    cursor: pointer !important;
+}
+
+.noUi-handle-upper {
+    top: wv-1600(-6px) !important;
+    right: wv-1600(-5px) !important;
+    cursor: pointer !important;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: wv-1600(14px) !important;
+    height: wv-1600(14px) !important;
+    top: wv-1600(-6px);
+
+    @include tablet-p() {
+        width: wv-768(14px) !important;
+        height: wv-768(14px) !important;
+        top: wv-768(-6px) !important;
+    }
+
+    @include mobile() {
+        width: wv-375(14px) !important;
+        height: wv-375(14px) !important;
+        top: wv-375(-6px) !important;
+        right: wv-375(-6px) !important;
+    }
+}
+
+.noUi-handle {
+    border: none !important;
+    border-radius: 0 !important;
+    background: $dark-blue !important;
+    cursor: default;
+    box-shadow: none !important;
+    transition: all 0.2s;
+
+    &:hover {
+        background: $beige !important;
+        border: wv-1600(1px) solid $beige !important;
+    }
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+    display: none !important;
+}
+
+#baloon {
+    background: $blue-grey;
+    max-width: 160px;
+    color: $white;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+.picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

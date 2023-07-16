@@ -1,0 +1,110 @@
+@import 'styles/vars';
+
+.noSuitableFlats {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: wv-1600(202px);
+    margin-bottom: wv-1600(142px);
+    position: relative;
+
+    @include tablet-p() {
+        margin-top: wv-768(74px);
+    }
+    &__box {
+        width: wv-1600(530px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        @include tablet-p() {
+            width: wv-768(402px);
+        }
+        @include mobile() {
+            width: wv-375(319px);
+        }
+    }
+    &__title {
+        @include h3;
+        color: $black;
+        margin-bottom: wv-1600(25px);
+        @include tablet-p() {
+            margin-bottom: wv-768(16px);
+            font-size: wv-768(22px);
+        }
+
+        @include mobile() {
+            font-size: wv-375(18px);
+            margin-bottom: wv-375(11px);
+        }
+    }
+    &__description {
+        @include p1;
+        margin-bottom: wv-1600(60px);
+        opacity: 0.5;
+        color: $black;
+        @include tablet-p() {
+            margin-bottom: wv-768(32px);
+        }
+        @include mobile() {
+            font-size: wv-375(16px);
+            margin-bottom: wv-375(32px);
+        }
+    }
+
+    &__descriptionFav {
+        @include p1;
+        margin-bottom: wv-1600(60px);
+        opacity: 1;
+        color: $black;
+
+        span {
+            position: relative;
+            cursor: pointer;
+            &::after {
+                content: '';
+                position: absolute;
+                background: $black;
+                height: wv-1600(0.7px);
+                width: 100%;
+                left: 0;
+                bottom: wv-1600(2px);
+            }
+        }
+    }
+    &__submit {
+        display: flex;
+        justify-content: center;
+        padding: wv-1600(20px) wv-1600(49.5px);
+        border: wv-1600(1.5px) solid $black;
+        background-color: transparent;
+        @include p3-bold;
+        color: $black;
+        font-size: wv-1600(20px);
+
+        transition: all 0.5s ease;
+        cursor: pointer;
+
+        &:hover {
+            border: wv-1600(1.5px) solid $beige;
+            color: $beige;
+        }
+
+        @include tablet-p() {
+            padding: wv-768(15px) wv-768(49.5px);
+        }
+        @include mobile() {
+            font-size: wv-375(15px);
+            padding: wv-375(15px) wv-375(49.5px);
+        }
+    }
+
+    &__wrapper {
+      @include wrapper-form-outer;
+    }
+
+    &__form {
+      @include wrapper-form-inner;               
+    }
+}

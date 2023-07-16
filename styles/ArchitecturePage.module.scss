@@ -1,0 +1,230 @@
+@import 'styles/vars';
+
+.container {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.info {
+    @include flex(row, space-between, null);
+    padding: wv-1600(140px) wv-1600(154px);
+
+    p {
+        max-width: wv-1600(542px);
+        @include p2;
+        @include tablet-p() {
+            max-width: 100%;
+        }
+
+        @include mobile() {
+            max-width: 100%;
+        }
+    }
+
+    @include laptop() {
+        padding: wv-1200(100px) wv-1200(115px);
+    }
+
+    @include tablet() {
+        padding: wv-1600(140px) wv-1600(154px);
+    }
+
+    @include tablet-l() {
+        padding: wv-768(105px) wv-768(40px);
+    }
+
+    @include tablet-p() {
+        padding: wv-768(105px) wv-768(40px);
+        flex-direction: column;
+        gap: wv-768(15px);
+    }
+
+    @include mobile() {
+        padding: wv-375(80px) wv-375(15px);
+        flex-direction: column;
+        gap: wv-375(15px);
+    }
+}
+
+.cta {
+    padding: wv-1600(18px) wv-1600(154px) wv-1600(140px) wv-1600(154px);
+
+    &__content {
+        max-width: wv-1600(1011px);
+        padding-bottom: wv-1600(80px);
+
+        @include laptop() {
+            max-width: wv-1200(760px);
+            padding-bottom: wv-1200(80px);
+        }
+
+        @include tablet-p() {
+            max-width: 100%;
+            padding-bottom: wv-768(60px);
+        }
+
+        @include mobile() {
+            max-width: 100%;
+            padding-bottom: wv-375(40px);
+        }
+    }
+
+    &__text {
+        @include p2;
+        padding: wv-1600(35px) 0 wv-1600(60px) 0;
+
+        @include laptop() {
+            padding: wv-1200(35px) 0 wv-1200(60px) 0;
+        }
+
+        @include tablet-l() {
+            padding: wv-768(25px) 0 wv-768(45px) 0;
+        }
+
+        @include tablet-p() {
+            padding: wv-768(25px) 0 wv-768(45px) 0;
+        }
+
+        @include mobile() {
+            padding: wv-375(20px) 0 wv-375(30px) 0;
+        }
+    }
+
+    &__img {
+        position: relative;
+        width: calc(100vw - wv-1600(308px));
+        height: wv-1600(780px);
+
+        @include laptop() {
+            width: calc(100vw - wv-1200(230px));
+            height: wv-1200(780px);
+        }
+
+        @include tablet-l() {
+            width: calc(100vw - wv-768(80px));
+            height: wv-768(415px);
+        }
+
+        @include tablet-p() {
+            width: calc(100vw - wv-768(80px));
+            height: wv-768(415px);
+        }
+
+        @include mobile() {
+            width: calc(100vw - wv-375(30px));
+            height: wv-375(206px);
+        }
+        img {
+            object-fit: cover;
+        }
+    }
+
+    @include laptop() {
+        padding: 0 wv-1200(115px) wv-1200(140px) wv-1200(115px);
+    }
+
+    @include tablet() {
+        padding: 0 wv-1600(154px) wv-1600(140px) wv-1600(154px);
+    }
+
+    @include tablet-l() {
+        padding: 0 wv-768(40px) wv-768(105px) wv-768(40px);
+    }
+
+    @include tablet-p() {
+        padding: 0 wv-768(40px) wv-768(105px) wv-768(40px);
+    }
+
+    @include mobile() {
+        padding: wv-375(40px) wv-375(15px) wv-375(80px) wv-375(15px);
+    }
+}
+
+.bottom {
+    position: relative;
+}
+
+.slider {
+    padding-top: wv-1600(140px);
+    padding-bottom: wv-1600(120px);
+
+    @include laptop() {
+        padding-top: wv-1200(140px);
+        padding-bottom: wv-1200(120px);
+    }
+
+    @include tablet-l() {
+        padding-top: wv-768(105px);
+        padding-bottom: wv-768(60px);
+    }
+
+    @include tablet-p() {
+        padding-top: wv-768(105px);
+        padding-bottom: wv-768(60px);
+    }
+
+    @include mobile() {
+        padding-top: wv-375(80px);
+        padding-bottom: wv-375(80px);
+    }
+}
+
+.image {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+
+    &_pic {
+        @include picture;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+}
+
+.title {
+    @include h1;
+    color: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    white-space: nowrap;
+
+    @include tablet-p() {
+        white-space: normal;
+    }
+
+    @include mobile() {
+        width: wv-375(340px);
+        white-space: normal;
+    }
+
+    span {
+        white-space: nowrap;
+    }
+}
+
+.subtitle {
+    @include h2;
+    max-width: wv-1600(918px);
+
+    @include tablet() {
+        max-width: 100%;
+    }
+
+    @include mobile() {
+        max-width: 100%;
+    }
+}
+
+.footnote {
+    @include sign;
+    color: $black;
+}

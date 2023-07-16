@@ -1,0 +1,50 @@
+@import 'styles/vars';
+
+.navItem {
+    padding-left: wv-1600(45px);
+    min-width: wv-1600(440px);
+}
+
+.title {
+    @include large-p;
+    opacity: 0.8;
+    padding-bottom: wv-1600(15px);
+    position: relative;
+
+    @include laptop() {
+        font-size: wv-1200(20px);
+    }
+
+    &::before {
+        @include p2;
+
+        @include laptop() {
+            font-size: wv-1200(15px);
+        }
+        position: absolute;
+        top: wv-1600(10px);
+        left: wv-1600(-40px);
+        opacity: 0.5;
+        counter-increment: section;
+        content: counter(section, decimal-leading-zero);
+
+        @include laptop() {
+            top: wv-1200(5px);
+        }
+    }
+}
+
+.link {
+    @include p2;
+    color: $black;
+    opacity: 0.8;
+
+    @include laptop() {
+        font-size: wv-1200(15px);
+    }
+
+    &:hover {
+        opacity: 1;
+        color: $beige;
+    }
+}

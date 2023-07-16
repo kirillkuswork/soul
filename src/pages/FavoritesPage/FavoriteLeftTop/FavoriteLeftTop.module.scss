@@ -1,0 +1,66 @@
+@import '../../../../styles/vars';
+
+.favoriteLeftTop {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: wv-1600(25px);
+
+   @include tablet-p() {
+      margin-bottom: wv-768(25px);
+   }
+
+   @include mobile() {
+      margin-bottom: wv-375(20px);
+   }
+
+   &__names {
+      display: flex;
+      align-items: center;
+      gap: wv-1600(10px);
+   }
+
+   &__name {
+      @include large-p;
+      color: $black;
+   }
+
+   &__amount {
+      @include p2;
+
+      @include tablet-p() {
+         font-size: wv-768(13px);
+      }
+   }
+
+   &__clear {
+      @include p3-bold;
+      color: $black;
+      padding: wv-1600(15px) wv-1600(35px);
+      border: 1px solid $black;
+
+      @include tablet-p() {
+         padding: wv-768(11px) wv-768(40.5px);
+      }
+
+      @include mobile() {
+         position: relative;
+         @include p2;
+         border: none;
+         padding-right: wv-375(21px);
+
+         &::after {
+            position: absolute;
+            content: url(../../../assets/images/unknown/icons/close.svg);
+            right: 0;
+            top: 50%;
+            transform: translateY(-42%);
+         }
+      }
+
+      &:hover {
+         color: $beige;
+         border: 1px solid $beige;
+      }
+   }
+}

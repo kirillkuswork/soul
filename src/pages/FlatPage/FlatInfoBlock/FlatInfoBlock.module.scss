@@ -1,0 +1,59 @@
+@import '../../../../styles/vars';
+
+.flatInfoBlock {
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: wv-1600(18px) wv-1600(0px);
+        border-bottom: 1px solid rgba(36, 41, 46, 0.2);
+
+        @include tablet-p() {
+            width: wv-768(326.5px);
+            margin-bottom: wv-768(15px);
+            padding: wv-1600(0px) wv-1600(0px) wv-768(16px) wv-1600(0px);
+        }
+
+        @include mobile() {
+            padding: wv-375(13px) wv-1600(0px) wv-375(15px) wv-1600(0px);
+        }
+
+        &__advantage {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: wv-1600(18px) wv-1600(0px);
+            border-bottom: 1px solid rgba(36, 41, 46, 0.2);
+
+            @include tablet-p() {
+                width: wv-768(326.5px);
+                margin-bottom: wv-768(15px);
+                padding: wv-1600(0px) wv-1600(0px) wv-768(16px) wv-1600(0px);
+            }
+
+            @include mobile() {
+                padding: wv-375(13px) wv-1600(0px) wv-375(15px) wv-1600(0px);
+            }
+
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+
+    &__desc {
+        @include p2;
+
+        @include tablet-p() {
+            font-size: wv-768(14px);
+        }
+    }
+
+    &__num {
+        @include p1-bold;
+        color: $black;
+        @include tablet-p() {
+            font-size: wv-768(15px);
+        }
+    }
+}

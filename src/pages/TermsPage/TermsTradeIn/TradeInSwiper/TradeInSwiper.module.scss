@@ -1,0 +1,162 @@
+@import 'styles/vars';
+
+.container {
+    margin-right: wv-768(40px);
+
+    @include mobile() {
+        margin-right: wv-375(15px);
+    }
+
+    :global {
+        .swiper {
+            overflow: visible;
+        }
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, wv-1600(292px));
+    grid-auto-rows: wv-1600(360px);
+    gap: wv-1600(20px);
+    margin-left: wv-1600(10px);
+
+    @include laptop() {
+        grid-template-columns: repeat(3, wv-1200(250px));
+        grid-auto-rows: wv-1200(360px);
+        gap: wv-1200(20px);
+        margin-left: wv-1200(10px);
+    }
+
+    @include tablet() {
+        grid-template-columns: repeat(3, wv-1600(292px));
+        grid-auto-rows: wv-1600(360px);
+        gap: wv-1600(20px);
+        margin-left: wv-1600(10px);
+    }
+}
+
+.card {
+    @include flex(column, space-between, null);
+    background: $light-beige;
+    padding: wv-1600(30px);
+
+    @include laptop() {
+        padding: wv-1200(30px);
+    }
+
+    @include tablet-l() {
+        padding: wv-768(30px);
+        width: wv-768(275px);
+        height: wv-768(340px);
+    }
+
+    @include tablet-p() {
+        padding: wv-768(30px);
+        width: wv-768(275px);
+        height: wv-768(340px);
+    }
+
+    @include mobile() {
+        padding: wv-375(20px);
+        width: wv-375(219px);
+        height: wv-375(270px);
+    }
+
+    &_icon {
+        font-size: wv-1600(70px);
+
+        @include laptop() {
+            font-size: wv-1200(70px);
+        }
+
+        @include tablet-l() {
+            font-size: wv-768(65px);
+        }
+
+        @include tablet-p() {
+            font-size: wv-768(65px);
+        }
+
+        @include mobile() {
+            font-size: wv-375(50px);
+        }
+    }
+
+    &_btn {
+        @include flex(row, null, center);
+        gap: wv-1600(10px);
+        margin-top: wv-1600(20px);
+
+        @include laptop() {
+            gap: wv-1200(10px);
+            margin-top: wv-1200(20px);
+        }
+
+        @include tablet-l() {
+            gap: wv-768(10px);
+            margin-top: wv-768(20px);
+        }
+
+        @include tablet-p() {
+            gap: wv-768(10px);
+            margin-top: wv-768(20px);
+        }
+
+        @include mobile() {
+            gap: wv-375(10px);
+            margin-top: wv-375(20px);
+        }
+
+        &:hover {
+            p {
+                color: $beige;
+            }
+
+            svg > g > path {
+                fill: $beige;
+                &:nth-child(2) {
+                    stroke: $beige;
+                }
+            }
+        }
+    }
+
+    &_arrow {
+        width: wv-1600(20px);
+        height: wv-1600(20px);
+
+        @include laptop() {
+            width: wv-1200(20px);
+            height: wv-1200(20px);
+        }
+
+        @include tablet-l() {
+            width: wv-768(20px);
+            height: wv-768(20px);
+        }
+
+        @include tablet-p() {
+            width: wv-768(20px);
+            height: wv-768(20px);
+        }
+
+        @include mobile() {
+            width: wv-375(20px);
+            height: wv-375(20px);
+        }
+    }
+
+    &_text {
+        @include p2-bold;
+    }
+}
+
+.buttonsContainer {
+    padding-top: 20px;
+    @include flex(row, flex-end, null);
+
+    button:first-of-type {
+        margin-right: 20px;
+    }
+}

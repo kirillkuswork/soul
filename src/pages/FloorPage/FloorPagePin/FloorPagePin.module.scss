@@ -1,0 +1,47 @@
+@import 'styles/vars';
+
+.pin {
+    position: absolute;
+    display: none;
+    border: wv-1600(1px) solid $beige;
+    width: wv-1600(93px);
+    height: wv-1600(36px);
+    background-color: $white;
+    cursor: pointer;
+
+    &:hover &__room {
+        background-color: $beige;
+        color: $white;
+    }
+
+    &__room {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+        width: wv-1600(36px);
+        border-right: wv-1600(1px) solid $beige;
+        font-weight: 600;
+        font-size: wv-1600(15px);
+        line-height: 130%;
+        text-align: center;
+        color: $beige;
+    }
+
+    &__description {
+        padding: wv-1600(5px) wv-1600(0px) wv-1600(3px) wv-1600(5px);
+    }
+
+    &__number {
+        font-weight: 400;
+        font-size: wv-1600(11px);
+        line-height: 130%;
+        color: $grey;
+    }
+    &__area {
+        font-weight: 600;
+        font-size: wv-1600(11px);
+        line-height: 130%;
+        color: $black;
+    }
+}

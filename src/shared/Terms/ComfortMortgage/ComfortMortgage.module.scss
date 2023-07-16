@@ -1,0 +1,187 @@
+@import 'styles/vars';
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: $blue-black;
+    width: 100vw;
+    padding: wv-1600(220px) wv-1600(60px) wv-1600(140px) wv-1600(60px);
+
+    @include tablet() {
+        gap: wv-1200(40px);
+        padding: wv-1200(220px) wv-1200(60px) wv-1200(140px) wv-1200(60px);
+    }
+
+    @include tablet-l() {
+        flex-direction: column;
+        min-height: 100vh;
+        padding: wv-768(206px) 0 wv-768(206px) 0;
+    }
+
+    @include tablet-p() {
+        flex-direction: column;
+        min-height: 100vh;
+        padding: wv-768(206px) 0 wv-768(206px) 0;
+    }
+
+    @include mobile() {
+        flex-direction: column;
+        min-height: wv-375(820px);
+        padding: wv-375(127px) 0;
+    }
+}
+
+.info {
+    width: 100%;
+    max-width: wv-1600(469px);
+
+    @include tablet() {
+        max-width: wv-1200(350px);
+    }
+
+    @include tablet-l() {
+        max-width: 100%;
+        padding-inline: wv-768(40px);
+        margin-bottom: wv-768(105px);
+    }
+
+    @include tablet-p() {
+        max-width: 100%;
+        padding-inline: wv-768(40px);
+        margin-bottom: wv-768(105px);
+    }
+
+    @include mobile() {
+        max-width: 100%;
+        margin-bottom: wv-375(80px);
+        padding-inline: wv-375(15px);
+    }
+}
+
+.title {
+    @include h2;
+    color: $white;
+    margin-bottom: wv-1600(60px);
+
+    @include tablet() {
+        margin-bottom: wv-1200(60px);
+    }
+
+    @include tablet-l() {
+        margin-bottom: wv-768(45px);
+    }
+
+    @include tablet-p() {
+        margin-bottom: wv-768(45px);
+    }
+
+    @include mobile() {
+        margin-bottom: wv-375(30px);
+    }
+}
+
+.text {
+    @include p2;
+    color: $almost-white;
+}
+
+.card {
+    background: $light-beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: wv-1600(30px);
+
+    @include tablet() {
+        padding: wv-1200(30px);
+    }
+
+    @include tablet-l() {
+        padding: wv-768(30px);
+        width: wv-768(276px);
+        height: wv-768(340px);
+    }
+
+    @include tablet-p() {
+        padding: wv-768(30px);
+        width: wv-768(276px);
+        height: wv-768(340px);
+    }
+
+    @include mobile() {
+        padding: wv-375(20px);
+        width: wv-375(219px);
+        height: wv-375(270px);
+    }
+
+    &_icon {
+        width: wv-1600(70px);
+        height: wv-1600(70px);
+
+        @include tablet() {
+            width: wv-1200(70px);
+            height: wv-1200(70px);
+        }
+
+        @include tablet-l() {
+            width: wv-768(65px);
+            height: wv-768(65px);
+        }
+
+        @include tablet-p() {
+            width: wv-768(65px);
+            height: wv-768(65px);
+        }
+
+        @include mobile() {
+            width: wv-375(50px);
+            height: wv-375(50px);
+        }
+    }
+
+    &_text {
+        @include p1-bold;
+    }
+
+    &_footNote {
+        @include sign;
+        margin-top: wv-1600(12px);
+    }
+}
+
+.cardList {
+    display: grid;
+    grid-template-columns: repeat(3, wv-1600(292px));
+    grid-auto-rows: wv-1600(360px);
+    gap: wv-1600(20px);
+
+    @include tablet() {
+        grid-template-columns: repeat(3, wv-1200(220px));
+        grid-auto-rows: wv-1200(270px);
+        gap: wv-1200(15px);
+    }
+}
+
+.buttonsContainer {
+    padding-top: 20px;
+    @include flex(row, flex-end, null);
+    padding-right: wv-768(40px);
+
+    @include mobile() {
+        padding-right: wv-375(15px);
+    }
+
+    button:first-of-type {
+        margin-right: 20px;
+    }
+
+    svg > path,
+    svg > line,
+    svg > rect,
+    svg > g > line,
+    svg > g > path {
+        stroke: $white;
+        fill: $white;
+    }
+}

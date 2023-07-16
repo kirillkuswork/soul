@@ -1,0 +1,26 @@
+@import 'styles/vars';
+
+.floorPageMiddle {
+    display: flex;
+    margin-top: 50px;
+
+    &__container {
+        position: relative;
+        display: flex;
+        width: wv-1600(370px);
+        align-items: center;
+        justify-content: center;
+    }
+    &__floor {
+        position: absolute;
+        z-index: 0;
+        opacity: 1;
+        left: 0;
+        top: 0;
+    }
+
+    &__floorFurnished {
+        position: static !important;
+        color: #daeff785;
+    }
+}
